@@ -5,39 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Arael Anaya</title>
     <link rel="stylesheet" href="css/styles.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
 </head>
 <body>
     <header class="site-header">
-    <div class="container header-row">
-    <a class="brand" href="index.html">Arael Anaya</a>
+        <div class="container header-row">
+            <a class="brand" href="index.html">Arael Anaya</a>
+            <button class="menu-button" aria-label="Open menu" aria-expanded="false">
+            ☰
+            </button>
+            <nav class="nav" aria-label="Primary navigation">
+                <a href="projects.html">Projects</a>
+                <a href="research.html">Research</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>        
+            </nav>
+        </div>
 
-    <button class="menu-button" aria-label="Open menu" aria-expanded="false">
-    ☰
-    </button>
-
-    <nav class="nav" aria-label="Primary navigation">
-        <a href="projects.html">Projects</a>
-        <a href="research.html">Research</a>
-        <a href="resume.html">Resume</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    </div>
-
-    <nav class="mobile-nav" aria-label="Mobile navigation">
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a>
-        <a href="mailto:you@school.edu">Email</a>
-    </nav>
-</header>
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+            <a href="projects.html">Projects</a>
+                <a href="research.html">Research</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>    
+        </nav>
+    </header>
 
 <main class="container">
 
 </main>
 
 <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-content">
+        <button class="theme-toggle">Theme</button>
         <small>© <span id="year"></span> Arael Anaya</small>
     </div>
 </footer>
