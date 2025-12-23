@@ -15,27 +15,115 @@
 <body>
     <header class="site-header">
         <div class="container header-row">
-            <a class="brand" href="index.html">Arael Anaya</a>
+            <a class="brand" href="main.html">Arael Anaya</a>
             <button class="menu-button" aria-label="Open menu" aria-expanded="false">
             ☰
             </button>
             <nav class="nav" aria-label="Primary navigation">
+                <a href="main.html">Main</a>
                 <a href="projects.html">Projects</a>
                 <a href="research.html">Research</a>
                 <a href="resume.html">Resume</a>
+                <a href="aboutMe.html">About Me</a>
                 <a href="contact.html">Contact</a>        
             </nav>
         </div>
 
         <nav class="mobile-nav" aria-label="Mobile navigation">
-            <a href="projects.html">Projects</a>
+                <a href="projects.html">Projects</a>
                 <a href="research.html">Research</a>
                 <a href="resume.html">Resume</a>
-                <a href="contact.html">Contact</a>    
+                <a href="aboutMe.html">About Me</a>
+                <a href="contact.html">Contact</a>        
         </nav>
     </header>
 
 <main class="container">
+    <section class="card project-block">
+        <h2>Portable Pedal-Powered Generator</h2>
+
+        <p class="project-meta">
+        MEGN 301 Final Design Project · Fall 2025
+        </p>
+
+        <p class="project-summary">
+        Designed and manufactured a portable mechanical generator capable of producing
+        usable DC power for phone charging and lighting. The system integrates a custom
+        transmission, back-driven stepper motor, power electronics, and user interface.
+        Emphasis was placed on affordability, manufacturability, ergonomics, and real-world
+        performance validation.
+        </p>
+
+        <div class="project-actions">
+            <button class="chip" data-modal="report-301">
+            Project Report
+            </button>
+        </div>
+
+        <h3>Demonstration Videos</h3>
+
+        <div class="video-grid">
+            <div class="video">
+                <iframe
+                    src="https://www.youtube.com/embed/qma7bmkuIS4"
+                    allowfullscreen
+                ></iframe>
+            </div>
+
+        <div class="video">
+                <iframe
+                    src="https://www.youtube.com/embed/PBQq28FPERw"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section class="card">
+        <h2>Accessible Cup Holder Bracket</h2>
+        <p class="project-meta">MEGN 381 · Manufacturing Processes · Fall 2025</p>
+
+        <p>
+            Designed, analyzed, and manufactured a sheet-metal steel cup holder bracket
+            for wheelchair and crutch users. The project emphasized design for
+            manufacturability, structural validation, and scalable production.
+        </p>
+
+        <ul class="bullets">
+            <li>Sheet-metal design with plasma cutting, bending, and welding</li>
+            <li>FEA-based structural validation and factor-of-safety analysis</li>
+            <li>Cost modeling and time studies for production scaling</li>
+            <li>Integration of resin-printed polymer components</li>
+        </ul>
+
+        <div class="project-actions">
+            <button class="chip" data-modal="report-381">
+            Project Report
+            </button>
+        </div>
+
+        <h3>Demonstration Videos</h3>
+
+        <div class="video-grid single">
+  <div class="video">
+    <iframe
+      src="https://www.youtube.com/embed/5yXE2kGditM"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+
+    </section>
+
+
+
+
+
+
 
 </main>
 
@@ -46,6 +134,41 @@
     </div>
 </footer>
 
+
+
+<!-- OVERLAYS -->
+<div class="modal-overlay" id="report-301">
+    <div class="modal-backdrop">
+    </div>
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Portable Pedal-Powered Generator – Final Report</h3>
+                <button class="modal-close" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-content">
+                <iframe src="assets/Reports/Final Report 301.pdf"></iframe>
+            </div>
+        </div>
+</div>
+
+
+
+<div class="modal-overlay" id="report-381">
+    <div class="modal-backdrop">
+    </div>
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Project Final Report – MEGN 381</h3>
+                <button class="modal-close" aria-label="Close report">&times;</button>
+            </div>
+
+            <div class="modal-content">
+                <iframe src="assets/Reports/Final Report 381.pdf" title="MEGN 381 Project Report"></iframe>
+            </div>
+        </div>
+</div>
+
 <script src="js/main.js"></script>
+
 </body>
 </html>

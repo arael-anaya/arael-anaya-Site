@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arael Anaya</title>
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="brand" href="main.html">Arael Anaya</a>
+            <button class="menu-button" aria-label="Open menu" aria-expanded="false">
+            ☰
+            </button>
+            <nav class="nav" aria-label="Primary navigation">
+                <a href="main.html">Main</a>
+                <a href="projects.html">Projects</a>
+                <a href="research.html">Research</a>
+                <a href="resume.html">Resume</a>
+                <a href="aboutMe.html">About Me</a>
+                <a href="contact.html">Contact</a>        
+            </nav>
+        </div>
+
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+                <a href="projects.html">Projects</a>
+                <a href="research.html">Research</a>
+                <a href="resume.html">Resume</a>
+                <a href="aboutMe.html">About Me</a>
+                <a href="contact.html">Contact</a>        
+        </nav>
+    </header>
+
+<main class="container">
+    <section class="home-hero">
+        <h1>Robotics, Control, and Multi-Agent Systems</h1>
+        <p class="home-intro">
+            I design and experimentally validate resilient multi-agent robotic systems,
+            with a focus on aerial swarms, distributed control, and real-world autonomy.
+            My work bridges theoretical guarantees with hands-on implementation using
+            Crazyflie drones, motion capture, and ROS 2.
+        </p>
+
+        <div class="home-actions">
+        <a class="chip" href="projects.html">View Projects</a>
+        <a class="chip" href="research.html">Research</a>
+        <a class="chip" href="resume.html">Resume</a>
+        </div>
+    </section>
+
+    <!-- RESEARCH FOCUS AREAS -->
+    <section class="card">
+        <h2>Research Focus</h2>
+        <ul class="focus-grid">
+        <li>
+            <strong>Distributed & Resilient Control</strong><br>
+            Consensus, W-MSR, fault-tolerant multi-agent coordination.
+        </li>
+        <li>
+            <strong>Aerial Swarm Robotics</strong><br>
+            Crazyflie platforms, experimental validation, swarm behaviors.
+        </li>
+        <li>
+            <strong>State Estimation & Localization</strong><br>
+            Kalman filtering, motion capture integration, robustness analysis.
+        </li>
+        <li>
+            <strong>Real-World Autonomy</strong><br>
+            Bridging theory with hardware-in-the-loop testing.
+        </li>
+        </ul>
+    </section>
+
+    <!-- FEATURED WORK -->
+    <section class="card">
+        <h2>Featured Work</h2>
+
+        <div class="featured-list">
+        <article>
+            <h3>Resilient Consensus in Aerial Swarms</h3>
+            <p>
+            Experimental evaluation of resilient consensus algorithms under adversarial
+            conditions using multi-agent Crazyflie platforms.
+            </p>
+            <a href="projects.html">View project →</a>
+        </article>
+
+        <article>
+            <h3>Swarm Localization with Kalman Filtering</h3>
+            <p>
+            Improving localization accuracy in multi-agent systems through filtering
+            and sensor fusion with OptiTrack motion capture.
+            </p>
+            <a href="projects.html">View project →</a>
+        </article>
+        </div>
+    </section>
+
+    <!-- AFFILIATION / CONTEXT -->
+    <section class="card">
+        <h2>Affiliation</h2>
+        <p>
+        I conduct research with the Motion Planning, Active Learning, and Autonomy (MPALA)
+        Lab at the Colorado School of Mines, focusing on experimental swarm robotics and
+        resilient control.
+        </p>
+        <a href="about.html">More about me →</a>
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <button class="theme-toggle">Theme</button>
+        <small>© <span id="year"></span> Arael Anaya</small>
+    </div>
+</footer>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
