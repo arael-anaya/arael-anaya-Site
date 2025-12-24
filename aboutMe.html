@@ -19,31 +19,7 @@
 
 </head>
 <body>
-    <header class="site-header">
-        <div class="container header-row">
-            <a class="brand" href="main.html">Arael Anaya</a>
-            <button class="menu-button" aria-label="Open menu" aria-expanded="false">
-            ☰
-            </button>
-            <nav class="nav" aria-label="Primary navigation">
-                <a href="index.html">Main</a>
-                <a href="projects.html">Projects</a>
-                <a href="research.html">Research</a>
-                <a href="resume.html">Resume</a>
-                <a href="aboutMe.html">About Me</a>
-                <a href="contact.html">Contact</a>        
-            </nav>
-        </div>
-
-        <nav class="mobile-nav" aria-label="Mobile navigation">
-                <a href="index.html">Main</a>
-                <a href="projects.html">Projects</a>
-                <a href="research.html">Research</a>
-                <a href="resume.html">Resume</a>
-                <a href="aboutMe.html">About Me</a>
-                <a href="contact.html">Contact</a>         
-        </nav>
-    </header>
+    <div id="site-header"></div>
 
 <main class="container">
     <section class="hero">
@@ -74,14 +50,31 @@
         </div>
     </section>
 
+    <section class="card">
+            <h1>Resume</h1>
+
+            <div class="resume-actions">
+            <a class="chip" href="assets/Resume - Arael Anaya .pdf" target="_blank" rel="noopener">
+                Open PDF
+            </a>
+            <a class="chip" href="assets/Resume - Arael Anaya .pdf" download>
+                Download
+            </a>
+            </div>
+
+            <div class="resume-embed">
+            <iframe
+                src="assets/Resume - Arael Anaya .pdf"
+                title="Resume PDF"
+                loading="lazy">
+            </iframe>
+            </div>
+        </section>
+
+
 </main>
 
-<footer class="site-footer">
-    <div class="container footer-content">
-        <button class="theme-toggle">Theme</button>
-        <small>© <span id="year"></span> Arael Anaya</small>
-    </div>
-</footer>
+<div id="site-footer"></div>
 
 
 <script src="js/main.js"></script>

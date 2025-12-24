@@ -19,31 +19,7 @@
 
 </head>
 <body>
-    <header class="site-header">
-        <div class="container header-row">
-            <a class="brand" href="main.html">Arael Anaya</a>
-            <button class="menu-button" aria-label="Open menu" aria-expanded="false">
-            ☰
-            </button>
-            <nav class="nav" aria-label="Primary navigation">
-                <a href="index.html">Main</a>
-                <a href="projects.html">Projects</a>
-                <a href="research.html">Research</a>
-                <a href="resume.html">Resume</a>
-                <a href="aboutMe.html">About Me</a>
-                <a href="contact.html">Contact</a>        
-            </nav>
-        </div>
-
-        <nav class="mobile-nav" aria-label="Mobile navigation">
-                <a href="index.html">Main</a>
-                <a href="projects.html">Projects</a>
-                <a href="research.html">Research</a>
-                <a href="resume.html">Resume</a>
-                <a href="aboutMe.html">About Me</a>
-                <a href="contact.html">Contact</a>   
-        </nav>
-    </header>
+    <div id="site-header"></div>
 
 <main class="container">
     <section class="home-hero">
@@ -87,27 +63,16 @@
 
     <!-- FEATURED WORK -->
     <section class="card">
-        <h2>Featured Work</h2>
+        <h1>Featured Work</h1>
+        <div id="highlights-container"></div>
+            <script>
+            fetch("/components/highlights.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("highlights-container").innerHTML = html;
+            });
+        </script>
 
-        <div class="featured-list">
-        <article>
-            <h3>Resilient Consensus in Aerial Swarms</h3>
-            <p>
-            Experimental evaluation of resilient consensus algorithms under adversarial
-            conditions using multi-agent Crazyflie platforms.
-            </p>
-            <a href="projects.html">View project →</a>
-        </article>
-
-        <article>
-            <h3>Swarm Localization with Kalman Filtering</h3>
-            <p>
-            Improving localization accuracy in multi-agent systems through filtering
-            and sensor fusion with OptiTrack motion capture.
-            </p>
-            <a href="projects.html">View project →</a>
-        </article>
-        </div>
     </section>
 
     <!-- AFFILIATION / CONTEXT -->
@@ -124,12 +89,7 @@
 </main>
 
 
-<footer class="site-footer">
-    <div class="container footer-content">
-        <button class="theme-toggle">Theme</button>
-        <small>© <span id="year"></span> Arael Anaya</small>
-    </div>
-</footer>
+<div id="site-footer"></div>
 
 
 <script src="js/main.js"></script>

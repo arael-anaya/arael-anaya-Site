@@ -12,32 +12,9 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest">
     <link rel="shortcut icon" href="assets/favicon/favicon.ico">
 </head>
-<body>
-    <header class="site-header">
-        <div class="container header-row">
-            <a class="brand" href="main.html">Arael Anaya</a>
-            <button class="menu-button" aria-label="Open menu" aria-expanded="false">
-            ☰
-            </button>
-            <nav class="nav" aria-label="Primary navigation">
-                <a href="index.html">Main</a>
-                <a href="projects.html">Projects</a>
-                <a href="research.html">Research</a>
-                <a href="resume.html">Resume</a>
-                <a href="aboutMe.html">About Me</a>
-                <a href="contact.html">Contact</a>        
-            </nav>
-        </div>
 
-        <nav class="mobile-nav" aria-label="Mobile navigation">
-                <a href="index.html">Main</a>
-                <a href="projects.html">Projects</a>
-                <a href="research.html">Research</a>
-                <a href="resume.html">Resume</a>
-                <a href="aboutMe.html">About Me</a>
-                <a href="contact.html">Contact</a>      
-        </nav>
-    </header>
+<body>
+    <div id="site-header"></div>
 
 <main class="container">
     <section class="card project-block">
@@ -65,23 +42,32 @@
 
         <div class="video-grid">
             <div class="video">
-                <iframe
-                    src="https://www.youtube.com/embed/qma7bmkuIS4"
-                    allowfullscreen
-                ></iframe>
+                <iframe src="https://www.youtube.com/embed/qma7bmkuIS4" allowfullscreen ></iframe>
             </div>
-
-        <div class="video">
-                <iframe
-                    src="https://www.youtube.com/embed/PBQq28FPERw"
-                    allowfullscreen
-                ></iframe>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/PBQq28FPERw" allowfullscreen ></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://youtube.com/embed/_2sfNBx9Utc" allowfullscreen ></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://youtube.com/embed/2jFSHjcbOvc" allowfullscreen ></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://youtube.com/embed/qel1BGY7h90" allowfullscreen ></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://youtube.com/embed/adxFEvcAgwA" allowfullscreen ></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://youtube.com/embed/5x-4pCY4UcM" allowfullscreen ></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://youtube.com/embed/URFL3B2bzzE" allowfullscreen ></iframe>
             </div>
         </div>
 
-
     </section>
-
 
     <section class="card">
         <h2>Accessible Cup Holder Bracket</h2>
@@ -108,36 +94,25 @@
 
         <h3>Demonstration Videos</h3>
 
-        <div class="video-grid single">
-  <div class="video">
-    <iframe
-      src="https://www.youtube.com/embed/5yXE2kGditM"
-      allowfullscreen
-    ></iframe>
-  </div>
-</div>
-
-
+        <div class="video-grid">
+            <div class="video">
+                <iframe src="https://youtube.com/embed/xkKEk1F6tH0" allowfullscreen ></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://youtube.com/embed/5yXE2kGditM" allowfullscreen ></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://youtube.com/embed/PBQq28FPERw" allowfullscreen ></iframe>
+        </div>
     </section>
-
-
-
-
-
-
 
 </main>
 
-<footer class="site-footer">
-    <div class="container footer-content">
-        <button class="theme-toggle">Theme</button>
-        <small>© <span id="year"></span> Arael Anaya</small>
-    </div>
-</footer>
+<div id="site-footer"></div>
 
 
 
-<!-- OVERLAYS -->
+<!-- MODALS -->
 <div class="modal-overlay" id="report-301">
     <div class="modal-backdrop">
     </div>
@@ -151,7 +126,6 @@
             </div>
         </div>
 </div>
-
 
 
 <div class="modal-overlay" id="report-381">
@@ -169,7 +143,9 @@
         </div>
 </div>
 
-<script src="js/main.js"></script>
+<script src="js/main.js" ></script>
+<script src="js/modal.js" ></script>
+
 
 </body>
 </html>

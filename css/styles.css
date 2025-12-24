@@ -46,7 +46,7 @@ h3 {
     margin: 0 auto;
 }
 
-.site-header{
+#site-header{
     background: var(--accent);
     color: white;
 }
@@ -328,7 +328,7 @@ html[data-theme="dark"] {
   --text: #e5e7eb;      /* gray-200 */
   --muted: #9ca3af;     /* gray-400 */
   --accent: #1e3a8a;    /* blue-800 */
-  --card: #111827;      /* gray-900 */
+  --card: #050505;      /* gray-900 */
 }
 
 .theme-toggle {
@@ -355,7 +355,7 @@ html[data-theme="dark"] {
 
 
 /* -------------------------
-   Project block
+  Project block
 ------------------------- */
 
 .project-block h2 {
@@ -375,23 +375,28 @@ html[data-theme="dark"] {
 
 /* Video grid */
 .video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  
+  display: flex;
   gap: 1.25rem;
-  margin-top: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1rem;
+/* Individual video card */
+.video-grid .video {
+  flex: 0 0 360px;        /* FIXED size: no shrinking */
+  max-width: 360px;
+
+  scroll-snap-align: start;
 }
 
 /* Default video */
 .video {
   position: relative;
-  padding-top: 56.25%;
+  padding-top: 20%;
   border-radius: 12px;
   overflow: hidden;
   background: #000;
@@ -419,8 +424,24 @@ html[data-theme="dark"] {
 }
 
 .video-grid.single .video {
-  max-width: 720px;
+  flex-basis: 480px;
+  max-width: 480px;
   width: 100%;
+}
+
+
+/* Scoll Bar Dark Mode */
+.video-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.video-grid::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.25);
+  border-radius: 4px;
+}
+
+html[data-theme="dark"] .video-grid::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.25);
 }
 
 
