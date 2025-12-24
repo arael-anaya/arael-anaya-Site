@@ -1,0 +1,24 @@
+[
+  {
+    "id": "mpala",
+    "title": "MPALA Lab",
+    "meta": "Motion Planning, Active Learning, and Autonomy Lab",
+    "summary": "Research on resilient multi-agent systems, distributed control, and aerial swarm robotics using Crazyflie platforms, OptiTrack motion capture, and ROS 2.",
+    "tags": ["research", "lab"],
+    "logo": "assets/mpalaLogo.png",
+    "videos": ["VIDEO_ID_1", "VIDEO_ID_2"],
+    "links": [
+      {
+        "label": "Lab Website",
+        "url": "https://example.com"
+      }
+    ]
+  },
+  {
+    "id": "surf-poster",
+    "title": "Surf Poster – Multi-Agent Visualization",
+    "meta": "Research Poster",
+    "summary": "A visual research artifact communicating multi-agent coordination concepts through generative surf-style graphics.",
+    "tags": ["research", "visualization"]
+  }
+]
