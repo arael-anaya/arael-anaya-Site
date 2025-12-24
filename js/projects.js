@@ -1,63 +1,61 @@
 fetch("components/projects.json")
     .then(res => res.json())
     .then(projects => {
-        // Targets:
-        // - projects.html: <section id="projects"></section>
-        // - index.html: <section data-project-id="megn-301"></section>
-        const targets = document.querySelectorAll("#projects, [data-project-id]");
 
-        if (!targets.length) return;
+        document
+        .querySelectorAll("#projects, [data-project]")
+        .forEach(container => {
 
-        targets.forEach(container => {
-        const onlyId = container.dataset.projectId;
+            const projectAttr = container.dataset.project;
 
-        const filtered = onlyId
-            ? projects.filter(p => p.id === onlyId)
+            const requestedIds = projectAttr
+            ? projectAttr
+                .split(/[\s,]+/)
+                .map(id => id.trim())
+                .filter(Boolean)
+            : null;
+
+            const filtered = requestedIds
+            ? projects.filter(p => requestedIds.includes(p.id))
             : projects;
 
-        filtered.forEach(p => {
+            filtered.forEach(p => {
             const section = document.createElement("section");
             section.className = "card project-block";
 
             section.innerHTML = `
-            <h2>${p.title}</h2>
-            <p class="project-meta">${p.meta}</p>
-            <p class="project-summary">${p.summary}</p>
+                <h2>${p.title}</h2>
+                <p class="project-meta">${p.meta}</p>
+                <p class="project-summary">${p.summary}</p>
 
-            ${p.bullets ? `
-                <ul class="bullets">
-                ${p.bullets.map(b => `<li>${b}</li>`).join("")}
-                </ul>
-            ` : ""}
-
-            ${p.report ? `
+                ${p.report ? `
                 <div class="project-actions">
-                <button
+                    <button
                     class="chip"
                     data-report="${p.report.pdf}"
                     data-title="${p.report.title}"
-                >
+                    >
                     Project Report
-                </button>
+                    </button>
                 </div>
-            ` : ""}
+                ` : ""}
 
-            ${p.videos ? `
+                ${p.videos ? `
                 <h3>Demonstration Videos</h3>
                 <div class="video-scroll">
-                ${p.videos.map(v => `
+                    ${p.videos.map(v => `
                     <div class="video">
-                    <iframe
+                        <iframe
                         src="https://www.youtube.com/embed/${v}"
                         allowfullscreen
-                    ></iframe>
+                        ></iframe>
                     </div>
-                `).join("")}
+                    `).join("")}
                 </div>
-            ` : ""}
+                ` : ""}
             `;
 
             container.appendChild(section);
-        });
+            });
         });
     });
