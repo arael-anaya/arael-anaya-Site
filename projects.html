@@ -17,134 +17,32 @@
     <div id="site-header"></div>
 
 <main class="container">
-    <section class="card project-block">
-        <h2>Portable Pedal-Powered Generator</h2>
-
-        <p class="project-meta">
-        MEGN 301 Final Design Project · Fall 2025
-        </p>
-
-        <p class="project-summary">
-        Designed and manufactured a portable mechanical generator capable of producing
-        usable DC power for phone charging and lighting. The system integrates a custom
-        transmission, back-driven stepper motor, power electronics, and user interface.
-        Emphasis was placed on affordability, manufacturability, ergonomics, and real-world
-        performance validation.
-        </p>
-
-        <div class="project-actions">
-            <button class="chip" data-modal="report-301">
-            Project Report
-            </button>
-        </div>
-
-        <h3>Demonstration Videos</h3>
-
-        <div class="video-grid">
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/qma7bmkuIS4" allowfullscreen ></iframe>
-            </div>
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/PBQq28FPERw" allowfullscreen ></iframe>
-            </div>
-            <div class="video">
-                <iframe src="https://youtube.com/embed/_2sfNBx9Utc" allowfullscreen ></iframe>
-            </div>
-            <div class="video">
-                <iframe src="https://youtube.com/embed/2jFSHjcbOvc" allowfullscreen ></iframe>
-            </div>
-            <div class="video">
-                <iframe src="https://youtube.com/embed/qel1BGY7h90" allowfullscreen ></iframe>
-            </div>
-            <div class="video">
-                <iframe src="https://youtube.com/embed/adxFEvcAgwA" allowfullscreen ></iframe>
-            </div>
-            <div class="video">
-                <iframe src="https://youtube.com/embed/5x-4pCY4UcM" allowfullscreen ></iframe>
-            </div>
-            <div class="video">
-                <iframe src="https://youtube.com/embed/URFL3B2bzzE" allowfullscreen ></iframe>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="card">
-        <h2>Accessible Cup Holder Bracket</h2>
-        <p class="project-meta">MEGN 381 · Manufacturing Processes · Fall 2025</p>
-
-        <p>
-            Designed, analyzed, and manufactured a sheet-metal steel cup holder bracket
-            for wheelchair and crutch users. The project emphasized design for
-            manufacturability, structural validation, and scalable production.
-        </p>
-
-        <ul class="bullets">
-            <li>Sheet-metal design with plasma cutting, bending, and welding</li>
-            <li>FEA-based structural validation and factor-of-safety analysis</li>
-            <li>Cost modeling and time studies for production scaling</li>
-            <li>Integration of resin-printed polymer components</li>
-        </ul>
-
-        <div class="project-actions">
-            <button class="chip" data-modal="report-381">
-            Project Report
-            </button>
-        </div>
-
-        <h3>Demonstration Videos</h3>
-
-        <div class="video-grid">
-            <div class="video">
-                <iframe src="https://youtube.com/embed/xkKEk1F6tH0" allowfullscreen ></iframe>
-            </div>
-            <div class="video">
-                <iframe src="https://youtube.com/embed/5yXE2kGditM" allowfullscreen ></iframe>
-            </div>
-            <div class="video">
-                <iframe src="https://youtube.com/embed/PBQq28FPERw" allowfullscreen ></iframe>
-        </div>
-    </section>
+    <!-- <h1>Past Work</h1> -->
+    <section id="projects"></section>
 
 </main>
+
+<div class="modal-overlay" id="project-modal">
+    <div class="modal">
+        <div class="modal-header">
+        <h3 id="modal-title"></h3>
+        <button class="modal-close" aria-label="Close">&times;</button>
+        </div>
+
+        <div class="modal-content">
+        <iframe id="modal-frame" title="Project Report"></iframe>
+        </div>
+    </div>
+</div>
+
 
 <div id="site-footer"></div>
 
 
 
-<!-- MODALS -->
-<div class="modal-overlay" id="report-301">
-    <div class="modal-backdrop">
-    </div>
-        <div class="modal">
-            <div class="modal-header">
-                <h3>Portable Pedal-Powered Generator – Final Report</h3>
-                <button class="modal-close" aria-label="Close">&times;</button>
-            </div>
-            <div class="modal-content">
-                <iframe src="assets/Reports/Final Report 301.pdf"></iframe>
-            </div>
-        </div>
-</div>
-
-
-<div class="modal-overlay" id="report-381">
-    <div class="modal-backdrop">
-    </div>
-        <div class="modal">
-            <div class="modal-header">
-                <h3>Project Final Report – MEGN 381</h3>
-                <button class="modal-close" aria-label="Close report">&times;</button>
-            </div>
-
-            <div class="modal-content">
-                <iframe src="assets/Reports/Final Report 381.pdf" title="MEGN 381 Project Report"></iframe>
-            </div>
-        </div>
-</div>
-
 <script src="js/main.js" ></script>
 <script src="js/modal.js" ></script>
+<script src="js/projects.js" ></script>
 
 
 </body>
