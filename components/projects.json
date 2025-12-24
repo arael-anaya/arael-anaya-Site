@@ -1,0 +1,49 @@
+[
+    {
+        "id": "megn-301",
+        "title": "Portable Pedal-Powered Generator",
+        "meta": "MEGN 301 Final Design Project · Fall 2025",
+        "summary": "Designed and manufactured a portable mechanical generator capable of producing usable DC power for phone charging and lighting.",
+        "bullets": [
+        "Custom transmission and gearing",
+        "Back-driven stepper motor generation",
+        "Power electronics and user interface",
+        "Validated under real-world load conditions"
+        ],
+        "report": {
+        "title": "Portable Pedal-Powered Generator – Final Report",
+        "pdf": "assets/Reports/Final Report 301.pdf"
+        },
+        "videos": [
+        "qma7bmkuIS4",
+        "PBQq28FPERw",
+        "_2sfNBx9Utc",
+        "2jFSHjcbOvc",
+        "qel1BGY7h90",
+        "adxFEvcAgwA",
+        "5x-4pCY4UcM",
+        "URFL3B2bzzE"
+        ]
+    },
+
+    {
+        "id": "megn-381",
+        "title": "Accessible Cup Holder Bracket",
+        "meta": "MEGN 381 · Manufacturing Processes · Fall 2025",
+        "summary": "Designed, analyzed, and manufactured a sheet-metal steel cup holder bracket for wheelchair and crutch users.",
+        "bullets": [
+        "Sheet-metal plasma cutting, bending, welding",
+        "FEA-based structural validation",
+        "Cost and time studies for scaling"
+        ],
+        "report": {
+        "title": "Accessible Cup Holder Bracket – Final Report",
+        "pdf": "assets/Reports/Final Report 381.pdf"
+        },
+        "videos": [
+        "xkKEk1F6tH0",
+        "5yXE2kGditM",
+        "FxaqtibUmx8"
+        ]
+    }
+]

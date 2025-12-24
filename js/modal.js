@@ -1,37 +1,35 @@
-// Open modal
-document.querySelectorAll("[data-modal]").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const modal = document.getElementById(btn.dataset.modal);
-        modal?.classList.add("active");
-        document.body.style.overflow = "hidden";
-    });
-});
+const modal = document.getElementById("project-modal");
+const frame = document.getElementById("modal-frame");
+const title = document.getElementById("modal-title");
 
-// Close via button
-document.querySelectorAll(".modal-close").forEach(btn => {
-    btn.addEventListener("click", () => {
-        btn.closest(".modal-overlay")?.classList.remove("active");
-        document.body.style.overflow = "";
-    });
-});
+document.addEventListener("click", e => {
+    const openBtn = e.target.closest("[data-report]");
+    const closeBtn = e.target.closest(".modal-close");
 
-// Close via backdrop
-document.querySelectorAll(".modal-backdrop").forEach(backdrop => {
-    backdrop.addEventListener("click", () => {
-        backdrop.parentElement.classList.remove("active");
-        document.body.style.overflow = "";
-    });
-});
-
-// Close via ESC
-document.addEventListener("keydown", e => {
-    if (e.key === "Escape") {
-        document.querySelectorAll(".modal-overlay.active").forEach(m => {
-        m.classList.remove("active");
-    });
-    document.body.style.overflow = "";
+    // OPEN → lazy load PDF
+    if (openBtn) {
+        frame.src = openBtn.dataset.report;
+        title.textContent = openBtn.dataset.title;
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden"; // optional but recommended
+        return;
     }
-});
 
+    // CLOSE → unload PDF
+    if (closeBtn || e.target === modal) {
+        closeModal();
+    }
+    });
 
+    // ESC key support
+    document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+        closeModal();
+    }
+    });
 
+    function closeModal() {
+    modal.classList.remove("active");
+    frame.src = "";                 // unload PDF (lazy loading)
+    document.body.style.overflow = ""; // restore scroll
+}

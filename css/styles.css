@@ -429,58 +429,76 @@ html[data-theme="dark"] {
   width: 100%;
 }
 
+.video-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
 
-/* Scoll Bar Dark Mode */
-.video-grid::-webkit-scrollbar {
+.video-scroll .video {
+  min-width: 320px;
+  max-width: 360px;
+  flex: 0 0 auto;
+}
+
+
+/* Scrollbar (WebKit browsers) */
+.video-scroll::-webkit-scrollbar {
   height: 8px;
 }
 
-.video-grid::-webkit-scrollbar-thumb {
+.video-scroll::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,0.25);
   border-radius: 4px;
 }
 
-html[data-theme="dark"] .video-grid::-webkit-scrollbar-thumb {
+/* Dark mode scrollbar */
+html[data-theme="dark"] .video-scroll::-webkit-scrollbar-thumb {
   background: rgba(255,255,255,0.25);
 }
 
 
+
 /* Modal (shared for all projects) */
-/* Modal overlay container */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  display: none;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
 }
 
-/* Active modal */
 .modal-overlay.active {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-/* Backdrop */
-.modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-/* Modal window */
 .modal {
-  position: relative;
-  z-index: 1; /* 👈 THIS is the key */
   background: var(--card);
   width: min(900px, 95%);
   height: 85vh;
-  margin: auto;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  top: 50%;
-  transform: translateY(-50%);
+
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform .25s ease, opacity .25s ease;
 }
+
+.modal-overlay.active .modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 
 /* Header */
 .modal-header {
