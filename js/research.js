@@ -1,16 +1,16 @@
 import { renderEntries } from "./render.js";
 
-const containers = document.querySelectorAll("#projects, [data-project]");
+const containers = document.querySelectorAll("#research, [data-research]");
 
-fetch("components/projects.json")
+fetch("components/research.json")
     .then(r => {
-    if (!r.ok) throw new Error("Failed to load projects.json");
+    if (!r.ok) throw new Error("Failed to load research.json");
     return r.json();
     })
     .then(entries => {
         
         containers.forEach(container => {
-            const attr = container.dataset.project;
+            const attr = container.dataset.research;
             const ids = attr
             ? attr.split(/[\s,]+/)
             : null;
@@ -25,6 +25,6 @@ fetch("components/projects.json")
         .catch(err => {
         console.error(err);
         containers.forEach(c => {
-            c.innerHTML = "<p>Failed to load projects entries.</p>";
+            c.innerHTML = "<p>Failed to load research entries.</p>";
         });
         });
