@@ -41,7 +41,7 @@ h2 {
 h3 {
   font-size: 1.2rem;
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: .75rem;
 }
 
 
@@ -136,7 +136,7 @@ bounded to a smaller box than the whole page which is actually not great */
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 0;
+    margin-top: .25rem;
     margin-bottom: 0;
 }
 
@@ -153,12 +153,13 @@ bounded to a smaller box than the whole page which is actually not great */
     font-size: 0.85rem;
 }
 
-.card{
-    background: var(--card);
-    border-radius: 16px;
-    padding: 1rem 1.2rem;
-    margin: 1rem 0 1.5rem 0;
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
+
 
 .bullets{
     margin: 0.5rem 0 0 1.2rem;
@@ -176,6 +177,9 @@ bounded to a smaller box than the whole page which is actually not great */
     .hero{ grid-template-columns: 1fr; }
     .nav{ display: none; }
     .menu-button{ display: inline-block; }
+    .content-logo {
+    display: none;
+  }
     }
 
 .resume-actions {
@@ -260,8 +264,13 @@ bounded to a smaller box than the whole page which is actually not great */
 }
 
 /* -------------------------
-  Research (JSON-driven)
+  CONTENT
 ------------------------- */
+.content-block{
+  border-left: 5px solid var(--accent);
+  /* border-right: 5px solid var(--accent);
+  border-bottom: 5px solid var(--accent); */
+}
 
 .content-header {
   display: flex;
@@ -274,35 +283,37 @@ bounded to a smaller box than the whole page which is actually not great */
   flex: 1;
 }
 
+.content-header-text h2{
+  margin-bottom: 0rem;
+}
+
 .content-logo {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-top: 0.25rem;
 }
 
 .content-logo img {
-  max-width: 140px;   /* controls MPALA logo size */
-  width: 100%;
-  height: auto;
-  opacity: 0.9;
+  max-width: 110px;
+  opacity: 0.75;
 }
-/* Tighten spacing between research meta + summary */
+
+
 .content-meta {
   font-size: 0.85rem;
   color: var(--muted);
-  margin-bottom: 0.25rem; /* default is ~1rem */
+  margin-bottom: 0rem; 
+  margin-top: 0rem;
 }
 
 .content-summary {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1.25rem;
+  line-height: 1.65;
 }
 
 .content-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+  align-items: start;
 }
 
 /* Left column */
@@ -311,79 +322,26 @@ bounded to a smaller box than the whole page which is actually not great */
   max-width: 75ch;         /* readable line length */
 }
 
-/* Right column */
-.content-logo {
-  flex-shrink: 0;          /* prevents logo from shrinking */
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+.content-text h2 {
+  margin-bottom: 0.35rem;
 }
 
-.content-logo img {
-  max-width: 140px;
-  width: 100%;
-  height: auto;
-  opacity: 0.9;
+.related-media {
+  margin-top: 0rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
 }
 
-
-
-
-/* -------------------------
-  Dark theme
-------------------------- */
-
-html[data-theme="dark"] {
-  --bg: #0f172a;        /* slate-900 */
-  --text: #e5e7eb;      /* gray-200 */
-  --muted: #9ca3af;     /* gray-400 */
-  --accent: #1e3a8a;    /* blue-800 */
-  --card: #050505;      /* gray-900 */
+html[data-theme="dark"] .related-media {
+  border-top-color: rgba(255,255,255,0.12);
 }
 
-.theme-toggle {
-  background: transparent;
-  border: 1px solid var(--muted);
-  color: var(--text);
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  cursor: pointer;
+.related-media h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
 }
 
-.theme-toggle:hover {
-  background: rgba(0,0,0,0.05);
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-
-/* -------------------------
-  Project block
-------------------------- */
-
-.project-block h2 {
-  margin-bottom: 0.25rem;
-}
-
-.project-meta {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
-
-.project-summary {
-  max-width: 75ch;
-  margin-bottom: 1.5rem;
-}
-
-/* Video grid */
+* Video grid */
 .video-grid {
   
   display: flex;
@@ -407,9 +365,10 @@ html[data-theme="dark"] {
 .video {
   position: relative;
   padding-top: 20%;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   background: #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* When only one video exists */
@@ -425,6 +384,13 @@ html[data-theme="dark"] {
   width: 100%;
   height: 100%;
   border: none;
+  filter: saturate(0.85) contrast(0.95);
+}
+
+.video:hover iframe {
+  filter: none;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 /* Single-video layout */
@@ -455,6 +421,8 @@ html[data-theme="dark"] {
 }
 
 
+
+
 /* Scrollbar (WebKit browsers) */
 .video-scroll::-webkit-scrollbar {
   height: 8px;
@@ -464,6 +432,53 @@ html[data-theme="dark"] {
   background: rgba(0,0,0,0.25);
   border-radius: 4px;
 }
+
+
+
+
+
+
+/* -------------------------
+  Dark theme
+------------------------- */
+
+html[data-theme="dark"] {
+  --bg: #0f172a;        /* slate-900 */
+  --text: #e5e7eb;      /* gray-200 */
+  --muted: #9ca3af;     /* gray-400 */
+  --accent: #1e3a8a;    /* blue-800 */
+  --card: #050505;      /* gray-900 */
+}
+
+
+html[data-theme="dark"] .card {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+}
+
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--muted);
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
 
 /* Dark mode scrollbar */
 html[data-theme="dark"] .video-scroll::-webkit-scrollbar-thumb {

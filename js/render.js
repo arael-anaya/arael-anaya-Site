@@ -5,10 +5,11 @@ export function renderEntries(entries, container) {
         section.className = "card content-block";
 
         section.innerHTML = `
-        <div class="content-header">
+        <div class="content-row">
             <div class="content-text">
-            <h2>${e.title}</h2>
-            ${e.meta ? `<p class="content-meta">${e.meta}</p>` : ""}
+                <h2>${e.title}</h2>
+                ${e.meta ? `<p class="content-meta">${e.meta}</p>` : ""}
+                ${e.summary ? `<p class="content-summary">${e.summary}</p>` : ""}
             </div>
 
             ${e.logo ? `
@@ -18,13 +19,16 @@ export function renderEntries(entries, container) {
             ` : ""}
         </div>
 
-        ${e.summary ? `<p class="content-summary">${e.summary}</p>` : ""}
 
         ${e.bullets ? `
             <ul class="content-bullets">
             ${e.bullets.map(b => `<li>${b}</li>`).join("")}
             </ul>
         ` : ""}
+        
+
+        <div class="related-media">
+        <h3>Related Media</h3>
 
         ${e.report ? `
             <div class="content-actions">
@@ -36,8 +40,18 @@ export function renderEntries(entries, container) {
             </div>
         ` : ""}
 
+        ${e.links ? `
+            <div class="links-row">
+            ${e.links.map(l => `
+                <a class="chip" href="${l.url}" target="_blank" rel="noopener">
+                ${l.label}
+                </a>
+            `).join("")}
+            </div>
+        ` : ""}
+
         ${e.videos ? `
-            <h3>Related Media</h3>
+            
             <div class="video-scroll">
             ${e.videos.map(v => `
                 <div class="video">
@@ -51,15 +65,8 @@ export function renderEntries(entries, container) {
             </div>
         ` : ""}
 
-        ${e.links ? `
-            <div class="links-row">
-            ${e.links.map(l => `
-                <a class="chip" href="${l.url}" target="_blank" rel="noopener">
-                ${l.label}
-                </a>
-            `).join("")}
-            </div>
-        ` : ""}
+        </div>
+        
         `;
 
         container.appendChild(section);

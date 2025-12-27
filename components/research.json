@@ -24,7 +24,7 @@
   {
   "id": "mirror",
   "title": "MIRROR Lab",
-  "meta": "Mines Interactive Robotics Research Lab ·Fall 2024 - Spring 2025",
+  "meta": "Mines Interactive Robotics Research Lab · Fall 2024 - Spring 2025",
   "summary": "Contributed to research on multi-robot teleoperation and AI-driven robotic systems with a focus on communication, coordination, and decision-making. Integrated multiple laboratory robots using ROS to enable collaborative experiments and structured data collection. Enhanced multi-teleoperation interfaces with DIARC, improving usability, responsiveness, and experimental performance. Developed and tested an AI-powered robotic assistant leveraging machine learning to improve real-time adaptability and decision-making. Co-authored a research paper on robotics and multi-agent systems (publication pending), contributing to technical writing and academic dissemination.",
   "tags": ["research", "lab", "multi-robot", "teleoperation"],
   "logo": "assets/mirrorLabLogo.png",
