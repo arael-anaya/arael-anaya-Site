@@ -34,7 +34,8 @@ h1 {
 
 h2 {
   font-size: 1.5rem;    /* ~27px */
-  margin-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h3 {
@@ -43,6 +44,9 @@ h3 {
   margin-top: 0;
 }
 
+
+/* Come Back and edit this, this is basically whats keeping the whole site 
+bounded to a smaller box than the whole page which is actually not great */
 .container{
     width: min(var(--max), calc(100% - 2rem));
     margin: 0 auto;
@@ -74,8 +78,6 @@ h3 {
   display: flex;
   align-items: center;    /* vertically centers text inside header */
 }
-
-
 
 .nav{
     display: flex;
@@ -130,11 +132,6 @@ h3 {
   font-size: 1rem;   /* inherit from body = 18px */
 }
 
-.hero-text p,
-.research-text p {
-  max-width: 75ch;   /* rule: 50–75 characters */
-}
-
 .links-row{
     display: flex;
     flex-wrap: wrap;
@@ -180,8 +177,6 @@ h3 {
     .nav{ display: none; }
     .menu-button{ display: inline-block; }
     }
-
-
 
 .resume-actions {
   display: flex;
@@ -250,11 +245,6 @@ h3 {
   }
 }
 
-
-
-
-
-
 .hero-photo {
   flex-shrink: 0;
   display: flex;
@@ -269,119 +259,67 @@ h3 {
   display: block;
 }
 
-
-.research-row {
-  display: flex;
-  gap: 1.5rem;
-}
-
-/* MPALA: text + logo side by side */
-.research-row.side-by-side {
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-/* MIRROR: logo underneath text */
-.research-row.stacked {
-  flex-direction: column;
-
-}
-
-.research-text {
-  flex: 1;
-}
-
-
-.mpala-logo {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mpala-logo img {
-  max-width: 140px;   /* logo size */
-  width: 100%;
-  height: auto;
-  opacity: 0.9;
-}
-
-
-.mirror-logo {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.75rem;
-}
-
-/* MIRROR logo image */
-.mirror-logo img {
-  max-width: 350px;
-  width: 100%;
-  height: auto;
-  opacity: 0.9;
-}
-
 /* -------------------------
-   Research (JSON-driven)
+  Research (JSON-driven)
 ------------------------- */
 
-.research-header {
+.content-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
 }
 
-.research-header-text {
+.content-header-text {
   flex: 1;
 }
 
-.research-logo {
+.content-logo {
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.research-logo img {
+.content-logo img {
   max-width: 140px;   /* controls MPALA logo size */
   width: 100%;
   height: auto;
   opacity: 0.9;
 }
 /* Tighten spacing between research meta + summary */
-.research-meta {
+.content-meta {
   font-size: 0.85rem;
   color: var(--muted);
   margin-bottom: 0.25rem; /* default is ~1rem */
 }
 
-.research-summary {
+.content-summary {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.research-row {
+.content-row {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
 }
 
 /* Left column */
-.research-text {
+.content-text {
   flex: 1;                 /* takes remaining width */
   max-width: 75ch;         /* readable line length */
 }
 
 /* Right column */
-.research-logo {
+.content-logo {
   flex-shrink: 0;          /* prevents logo from shrinking */
   display: flex;
   align-items: flex-start;
   justify-content: center;
 }
 
-.research-logo img {
+.content-logo img {
   max-width: 140px;
   width: 100%;
   height: auto;

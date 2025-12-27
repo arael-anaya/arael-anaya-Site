@@ -1,61 +1,30 @@
+import { renderEntries } from "./render.js";
+
+const containers = document.querySelectorAll("#projects, [data-project]");
+
 fetch("components/projects.json")
-    .then(res => res.json())
-    .then(projects => {
-
-        document
-        .querySelectorAll("#projects, [data-project]")
-        .forEach(container => {
-
-            const projectAttr = container.dataset.project;
-
-            const requestedIds = projectAttr
-            ? projectAttr
-                .split(/[\s,]+/)
-                .map(id => id.trim())
-                .filter(Boolean)
+    .then(r => {
+    if (!r.ok) throw new Error("Failed to load projects.json");
+    return r.json();
+    })
+    .then(entries => {
+        
+        containers.forEach(container => {
+            const attr = container.dataset.project;
+            const ids = attr
+            ? attr.split(/[\s,]+/)
             : null;
 
-            const filtered = requestedIds
-            ? projects.filter(p => requestedIds.includes(p.id))
-            : projects;
+            const filtered = ids
+            ? entries.filter(e => ids.includes(e.id))
+            : entries;
 
-            filtered.forEach(p => {
-            const section = document.createElement("section");
-            section.className = "card project-block";
-
-            section.innerHTML = `
-                <h2>${p.title}</h2>
-                <p class="project-meta">${p.meta}</p>
-                <p class="project-summary">${p.summary}</p>
-
-                ${p.report ? `
-                <div class="project-actions">
-                    <button
-                    class="chip"
-                    data-report="${p.report.pdf}"
-                    data-title="${p.report.title}"
-                    >
-                    Project Report
-                    </button>
-                </div>
-                ` : ""}
-
-                ${p.videos ? `
-                <h3>Demonstration Videos</h3>
-                <div class="video-scroll">
-                    ${p.videos.map(v => `
-                    <div class="video">
-                        <iframe
-                        src="https://www.youtube.com/embed/${v}"
-                        allowfullscreen
-                        ></iframe>
-                    </div>
-                    `).join("")}
-                </div>
-                ` : ""}
-            `;
-
-            container.appendChild(section);
-            });
+            renderEntries(filtered, container);
         });
-    });
+        })
+        .catch(err => {
+        console.error(err);
+        containers.forEach(c => {
+            c.innerHTML = "<p>Failed to load projects entries.</p>";
+        });
+        });
