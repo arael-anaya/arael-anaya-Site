@@ -2,22 +2,22 @@
   {
     "id": "mpala",
     "title": "MPALA Lab",
-    "meta": "Motion Planning, Active Learning, and Autonomy Lab",
+    "meta": "Motion Planning, Active Learning, and Autonomy Lab (Spring 2025 - Present)",
     "summary": "Research on resilient multi-agent systems, distributed control, and aerial swarm robotics using Crazyflie platforms, OptiTrack motion capture, and ROS 2.",
     "tags": ["research", "lab"],
     "logo": "assets/mpalaLogo.png",
-    "videos": ["VIDEO_ID_1", "VIDEO_ID_2"],
+    "videos": ["3vim08XoM7w" , "cc0ZHdGcpwY"],
     "links": [
       {
         "label": "Lab Website",
-        "url": "https://example.com"
+        "url": "https://www.georgekontoudis.com/lab/"
       }
     ]
   },
   {
-    "id": "surf-poster",
+    "id": "surf-poster-2025",
     "title": "Surf Poster – Multi-Agent Visualization",
-    "meta": "Research Poster",
+    "meta": "Research Poster for SURF 2025",
     "summary": "A visual research artifact communicating multi-agent coordination concepts through generative surf-style graphics.",
     "tags": ["research", "visualization"]
   }

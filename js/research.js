@@ -1,78 +1,86 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const containers = document.querySelectorAll("#research, [data-research]");
-    if (!containers.length) return;
-
-    fetch("components/research.json")
-        .then(res => {
+fetch("components/research.json")
+    .then(res => {
         if (!res.ok) throw new Error("Failed to load research.json");
         return res.json();
-        })
-        .then(entries => {
-        containers.forEach(container => {
-            const attr = container.dataset.research;
+    })
+    .then(research => {
 
-            const requestedIds = attr
-            ? attr.split(/[\s,]+/).map(id => id.trim())
+        document
+        .querySelectorAll("#research, [data-research]")
+        .forEach(container => {
+
+            const researchAttr = container.dataset.research;
+
+            const requestedIds = researchAttr
+            ? researchAttr
+                .split(/[\s,]+/)
+                .map(id => id.trim())
+                .filter(Boolean)
             : null;
 
             const filtered = requestedIds
-            ? entries.filter(e => requestedIds.includes(e.id))
-            : entries;
+            ? research.filter(r => requestedIds.includes(r.id))
+            : research;
 
             filtered.forEach(r => {
             const section = document.createElement("section");
             section.className = "card research-block";
 
             section.innerHTML = `
-                <div class="research-header">
-                    <div class="research-header-text">
+                <div class="research-row">
+                <div class="research-text">
                     <h2>${r.title}</h2>
                     <p class="research-meta">${r.meta}</p>
-                    </div>
-
-                    ${r.logo ? `
-                    <div class="research-logo">
-                        <img src="${r.logo}" alt="${r.title} logo">
-                    </div>
-                    ` : ""}
+                    <p class="research-summary">${r.summary}</p>
                 </div>
 
-                <p class="research-summary">${r.summary}</p>
-
-                ${r.videos ? `
-                    <h3>Related Media</h3>
-                    <div class="video-scroll">
-                    ${r.videos.map(v => `
-                        <div class="video">
-                        <iframe
-                            src="https://www.youtube.com/embed/${v}"
-                            loading="lazy"
-                            allowfullscreen
-                        ></iframe>
-                        </div>
-                    `).join("")}
+                ${r.logo ? `
+                    <div class="research-logo">
+                    <img src="${r.logo}" alt="${r.title} logo">
                     </div>
                 ` : ""}
+                </div>
 
                 ${r.links ? `
-                    <div class="links-row">
+                <div class="links-row">
                     ${r.links.map(l => `
-                        <a class="chip" href="${l.url}" target="_blank" rel="noopener">
+                    <a
+                        class="chip"
+                        href="${l.url}"
+                        target="_blank"
+                        rel="noopener"
+                    >
                         ${l.label}
-                        </a>
+                    </a>
                     `).join("")}
-                    </div>
+                </div>
                 ` : ""}
-                `;
+
+                ${r.videos ? `
+                <h3>Related Media</h3>
+                <div class="video-scroll">
+                    ${r.videos.map(v => `
+                    <div class="video">
+                        <iframe
+                        src="https://www.youtube.com/embed/${v}"
+                        loading="lazy"
+                        allowfullscreen
+                        ></iframe>
+                    </div>
+                    `).join("")}
+                </div>
+                ` : ""}
+            `;
 
             container.appendChild(section);
             });
         });
-        })
-        .catch(err => {
+    })
+    .catch(err => {
         console.error(err);
-        containers.forEach(c => {
+        document
+        .querySelectorAll("#research, [data-research]")
+        .forEach(c => {
             c.innerHTML = "<p>Failed to load research entries.</p>";
         });
-        });
-});
+    });
