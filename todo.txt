@@ -1,5 +1,10 @@
     Fill Out Projects section
     Complete other sections (Projects coding should be done just need to fill in json)
+    Introduce type badges (Research / Project / Poster)
+    Add deep-link highlighting when navigating to a content item
+    Tighten copy specifically for grad admissions
+    Add subtle entrance animations for content cards
+
 
     Global
 
