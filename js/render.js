@@ -92,7 +92,7 @@ export function renderEntries(entries, container) {
                         <footer class="content-links">
                             ${secondaryLinks.map(l => `
                                 <a
-                                    class="action-btn secondary-action"
+                                    class="action-btn action-link"
                                     href="${l.url}"
                                     target="_blank"
                                     rel="noopener"
@@ -105,10 +105,10 @@ export function renderEntries(entries, container) {
 
                     ${e.report ? `
                         <div class="content-actions">
-                        <button class="action-btn secondary-action"
+                        <button class="action-btn action-pdf"
                             data-report="${e.report.pdf}"
                             data-title="${e.report.title}">
-                            ${e.report.title}
+                            ${e.report.title} · PDF
                         </button>
                         </div>
                     ` : ""}

@@ -60,6 +60,10 @@
       "label": "Lab Website",
       "url": "https://mirrorlab.mines.edu"
     }
-  ]
-}
+  ],
+  "videos": [
+      { "id": "4lf_5ZhyD1Y", "caption": "Walk through of  Multi-Agent Interface" },
+      { "id": "D1tw7J_B_OE", "caption": "Ros Node Prototype" }
+    ]
+  }
 ]

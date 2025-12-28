@@ -121,7 +121,7 @@ bounded to a smaller box than the whole page which is actually not great */
     display: grid;
     grid-template-columns: 1.3fr 0.7fr;
     gap: 2rem;
-    padding: 2rem 0;
+    padding: 1.5rem;
     align-items: start;
 }
 
@@ -263,8 +263,6 @@ bounded to a smaller box than the whole page which is actually not great */
 }
 
 .contact-intro {
-  max-width: 60ch;
-  color: var(--muted);
   margin-bottom: 1.5rem;
 }
 
@@ -273,6 +271,12 @@ bounded to a smaller box than the whole page which is actually not great */
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
+
+.contact-grid > div {
+  padding-left: 0.75rem;
+  border-left: 3px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
 
 .contact-grid h2 {
   font-size: 1.05rem;
@@ -522,18 +526,34 @@ bounded to a smaller box than the whole page which is actually not great */
   flex-wrap: wrap;
     gap: 0.75rem; 
 }
-/* Secondary action links: simple, academic */
 
-.secondary-action:hover {
+
+.action-link {
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  color: var(--text);
+}
+
+.action-link:hover {
   transform: translateY(-2px);
-  text-decoration-color: var(--text);
   text-decoration: underline;
+}
 
+.action-pdf {
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  color: var(--text);
 }
-.secondary-action:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
+
+.action-pdf:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--accent) 18%, var(--card));
 }
+
+.content-actions{
+  margin-bottom: 1rem;
+}
+
 
 
 .card:hover .video iframe,
