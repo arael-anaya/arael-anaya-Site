@@ -1,289 +1,118 @@
-    Fill Out Projects section
-    Complete other sections (Projects coding should be done just need to fill in json)
-
-    Global
-
-    Verify all pages load without console errors
-
-    Confirm all JS files load in correct order on every page
-
-    Ensure no duplicate IDs exist anywhere in DOM
-
-    Confirm header + footer load correctly on all pages
-
-    Verify dark mode persists across page refreshes
-
-    Verify dark mode persists across page navigation
-
-    Verify body scroll locking works when modal is open
-
-    Verify ESC closes modal in all cases
-
-    Verify clicking backdrop closes modal
-
-    Verify clicking inside modal does NOT close modal
-
-    Verify iframe unloads when modal closes (lazy loading works)
-
-    Navigation
-
-    Ensure mobile menu opens and closes correctly
-
-    Ensure mobile menu closes when a link is clicked
-
-    Verify aria-expanded updates correctly
-
-    Verify navigation works with keyboard only
-
-    Verify navigation color contrast meets accessibility standards
-
-    2. PROJECT SYSTEM (Core value of the site)
-    JSON Structure
-
-    Validate all project IDs are unique and kebab-case
-
-    Add optional fields:
-
-    date
-
-    tags
-
-    featured: true/false
-
-    Ensure every project has:
-
-    title
-
-    summary
-
-    id
-
-    Ensure optional fields fail gracefully if missing
-
-    Rendering Logic
-
-    Confirm data-project supports:
-
-    single ID
-
-    multiple IDs (comma + space separated)
-
-    Confirm all-projects page renders all projects
-
-    Confirm index page renders only selected projects
-
-    Confirm rendering order matches JSON order
-
-    Add optional sort support (date, featured, custom)
-
-    Videos
-
-    Ensure video containers never overflow page width
-
-    Ensure video containers have max height
-
-    Ensure video scrollbars appear when many videos exist
-
-    Ensure single video does not stretch too large
-
-    Verify videos lazy-load only when visible (optional improvement)
-
-    Test videos on mobile Safari and Chrome
-
-    Reports
-
-    Verify report buttons exist only if report exists
-
-    Verify PDFs load only after button click
-
-    Verify PDF iframe resizes correctly on mobile
-
-    Verify PDF iframe does not trap scroll
-
-    Verify report titles update dynamically
-
-    3. DESIGN & LAYOUT POLISH
-    Typography
-
-    Audit heading hierarchy (H1 → H2 → H3)
-
-    Ensure only one H1 per page
-
-    Ensure line length never exceeds ~75ch
-
-    Ensure font weights are consistent
-
-    Reduce visual noise in long paragraphs
-
-    Improve spacing between sections
-
-    Header
-
-    Ensure header color block is visible in light & dark mode
-
-    Ensure header height remains fixed
-
-    Ensure name remains visually dominant but not overpowering
-
-    Improve visual separation between header and content
-
-    Test header on ultra-wide screens
-
-    Footer
-
-    Ensure footer doesn’t feel “empty”
-
-    Improve theme toggle visibility in light mode
-
-    Add subtle divider above footer
-
-    Add small text links if needed (GitHub, LinkedIn)
-
-    Ensure footer spacing looks good on mobile
-
-    4. DARK MODE REFINEMENT
-
-    Audit all colors in dark mode
-
-    Ensure cards contrast from background
-
-    Ensure modal contrasts from backdrop
-
-    Ensure scrollbars are visible in dark mode
-
-    Ensure links are distinguishable from body text
-
-    Ensure chips/buttons look clickable in dark mode
-
-    Ensure hover states exist in dark mode
-
-    Test dark mode on OLED screens
-
-    5. ACCESSIBILITY (Important, often ignored)
-
-    Add alt text to all images
-
-    Ensure buttons are actual <button> elements
-
-    Ensure modals trap focus when open
-
-    Ensure focus returns to triggering button on modal close
-
-    Ensure all interactive elements are keyboard reachable
-
-    Ensure sufficient contrast ratios
-
-    Ensure iframes have titles
-
-    Ensure ARIA labels are accurate
-
-    6. PERFORMANCE OPTIMIZATION
-
-    Lazy-load PDFs (already done)
-
-    Lazy-load videos if possible
-
-    Compress images (headshot, logos)
-
-    Add loading="lazy" to non-critical images
-
-    Minify CSS
-
-    Minify JS
-
-    Remove unused CSS rules
-
-    Remove unused JS functions
-
-    Check Lighthouse performance score
-
-    7. CONTENT QUALITY
-    About / Main Page
-
-    Rewrite summary to be more concise
-
-    Remove redundant phrasing
-
-    Add a clear “what I do” sentence
-
-    Add a clear “why it matters” sentence
-
-    Ensure tone is confident, not verbose
-
-    Projects
-
-    Ensure each project has a clear problem statement
-
-    Ensure each project has a clear outcome
-
-    Ensure each project mentions tools/tech used
-
-    Ensure each project demonstrates growth
-
-    Remove fluff or vague language
-
-    8. SCALABILITY & FUTURE-PROOFING
-
-    Add deep-link support (?project=megn-301)
-
-    Add deep-link support for auto-opening reports
-
-    Add project tags and filtering
-
-    Add project sorting options
-
-    Add “related projects” logic
-
-    Add per-project pages auto-generated from JSON
-
-    Add search or filtering UI (optional)
-
-    Consider static site generator migration later (optional)
-
-    9. DEPLOYMENT & RELIABILITY
-
-    Verify GitHub Pages build works
-
-    Verify relative paths work everywhere
-
-    Verify site works when loaded directly (no local server)
-
-    Verify Netlify build compatibility
-
-    Add custom domain later
-
-    Add HTTPS redirect
-
-    Test site on:
-
-    Chrome
-
-    Firefox
-
-    Safari
-
-    Mobile Chrome
-
-    Mobile Safari
-
-    10. FINAL PRE-LAUNCH CHECKLIST
-
-    No placeholder text remains
-
-    No console logs left in production
-
-    No commented-out dead code
-
-    All links valid
-
-    Resume opens correctly
-
-    Contact page works
-
-    Email link works
-
-    Favicon displays correctly
-
-    Metadata (title, description) added
-
-    Site feels cohesive and intentional
+REMAINING WORK CHECKLIST
+
+Core Content & Structure
+- Fill out Projects section (populate remaining JSON entries)
+- Complete other sections content (Projects coding is done, content remains)
+- Introduce type badges (Research / Project / Poster)
+- Add deep-link highlighting when navigating to a content item
+- Tighten copy specifically for grad admissions
+
+Global Verification
+- Verify all pages load without console errors
+- Ensure no duplicate IDs exist anywhere in DOM
+
+Navigation
+- Ensure mobile menu closes when a link is clicked
+- Verify navigation works with keyboard only
+- Verify navigation color contrast meets accessibility standards
+
+2. PROJECT SYSTEM (Core value of the site)
+
+JSON Structure
+- Add optional fields:
+    - date
+    - tags
+    - featured (true/false)
+
+Rendering Logic
+- Add optional sort support (date, featured, custom)
+
+Videos
+- Verify videos lazy-load only when visible (optional improvement)
+- Test videos on mobile Safari and Chrome
+
+Reports
+- Verify PDF iframe resizes correctly on mobile
+- Verify PDF iframe does not trap scroll
+
+3. DESIGN & LAYOUT POLISH
+
+Typography
+- Audit heading hierarchy (H1 → H2 → H3)
+- Ensure line length never exceeds ~75ch
+- Reduce visual noise in long paragraphs
+- Improve spacing between sections
+
+Header
+- Improve visual separation between header and content
+- Test header on ultra-wide screens
+
+Footer
+- Ensure footer doesn’t feel empty
+- Improve theme toggle visibility in light mode
+- Add subtle divider above footer
+- Add small text links if needed (GitHub, LinkedIn)
+
+4. DARK MODE REFINEMENT
+- Audit all colors in dark mode
+- Ensure links are distinguishable from body text
+- Ensure chips/buttons look clickable in dark mode
+- Ensure hover states exist in dark mode
+- Test dark mode on OLED screens
+
+5. ACCESSIBILITY (Important)
+- Ensure modals trap focus when open
+- Ensure focus returns to triggering button on modal close
+- Ensure sufficient contrast ratios (WCAG AA+)
+
+6. PERFORMANCE OPTIMIZATION
+- Lazy-load videos if possible
+- Compress images (headshot, logos)
+- Minify CSS
+- Minify JS
+- Remove unused CSS rules
+- Remove unused JS functions
+- Check Lighthouse performance score
+
+7. CONTENT QUALITY
+
+About / Main Page
+- Rewrite summary to be more concise
+- Remove redundant phrasing
+- Add a clear “why it matters” sentence
+- Ensure tone is confident, not verbose
+
+Projects
+- Ensure each project has a clear problem statement
+- Ensure each project has a clear outcome
+- Ensure each project mentions tools/tech used
+- Ensure each project demonstrates growth
+- Remove fluff or vague language
+
+8. SCALABILITY & FUTURE-PROOFING
+- Add deep-link support (?project=megn-301)
+- Add deep-link support for auto-opening reports
+- Add project tags and filtering
+- Add project sorting options
+- Add related-projects logic
+- Add per-project pages auto-generated from JSON
+- Add search or filtering UI (optional)
+- Consider static site generator migration later (optional)
+
+9. DEPLOYMENT & RELIABILITY
+- Verify GitHub Pages build works
+- Verify Netlify build compatibility
+- Add custom domain later
+- Add HTTPS redirect
+- Test site on:
+    - Firefox
+    - Safari
+    - Mobile Chrome
+    - Mobile Safari
+
+10. FINAL PRE-LAUNCH CHECKLIST
+- No placeholder text remains
+- No commented-out dead code
+- All links valid
+- Metadata (title, description) added
+- Site feels cohesive and intentional

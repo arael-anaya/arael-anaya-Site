@@ -22,8 +22,12 @@
     <div id="site-header"></div>
 
 <main class="container">
+
     <section class="home-hero">
-        <h1>Robotics, Control, and Multi-Agent Systems</h1>
+        <h1 class="home-title">
+            Robotics, Control, and Multi-Agent Systems
+        </h1>
+
         <p class="home-intro">
             I design and experimentally validate resilient multi-agent robotic systems,
             with a focus on aerial swarms, distributed control, and real-world autonomy.
@@ -32,61 +36,73 @@
         </p>
 
         <div class="home-actions">
-        <a class="chip" href="projects.html">View Projects</a>
-        <a class="chip" href="research.html">Research</a>
-        <a class="chip" href="resume.html">Resume</a>
+            <a class="chip" href="projects.html">View Projects</a>
+            <a class="chip" href="research.html">Research</a>
+            <a class="chip" href="resume.html">Resume</a>
         </div>
     </section>
 
-    <!-- RESEARCH FOCUS AREAS -->
-    <section class="card">
-        <h2>Research Focus</h2>
-        <ul class="focus-grid">
-        <li>
-            <strong>Distributed & Resilient Control</strong><br>
-            Consensus, W-MSR, fault-tolerant multi-agent coordination.
-        </li>
-        <li>
-            <strong>Aerial Swarm Robotics</strong><br>
-            Crazyflie platforms, experimental validation, swarm behaviors.
-        </li>
-        <li>
-            <strong>State Estimation & Localization</strong><br>
-            Kalman filtering, motion capture integration, robustness analysis.
-        </li>
-        <li>
-            <strong>Real-World Autonomy</strong><br>
-            Bridging theory with hardware-in-the-loop testing.
-        </li>
-        </ul>
+    <div class="content-divider"></div>
+
+    <h2 class="section-label">Research Focus</h2>
+
+    <section class="card content-block">
+        <section class="content-card">
+            
+            <ul class="focus-grid">
+            <li>
+                <strong>Distributed & Resilient Control</strong><br>
+                Consensus, W-MSR, fault-tolerant multi-agent coordination.
+            </li>
+            <li>
+                <strong>Aerial Swarm Robotics</strong><br>
+                Crazyflie platforms, experimental validation, swarm behaviors.
+            </li>
+            <li>
+                <strong>State Estimation & Localization</strong><br>
+                Kalman filtering, motion capture integration, robustness analysis.
+            </li>
+            <li>
+                <strong>Real-World Autonomy</strong><br>
+                Bridging theory with hardware-in-the-loop testing.
+            </li>
+            </ul>
+        </section>
     </section>
 
-    <!-- FEATURED WORK -->
-    <section class="card">
-        <h2>Featured Project</h2>
+    <div class="content-divider"></div>
 
+    <h2 class="section-label">Featured</h2>
+
+    <section class="card">
         <section
             id="project"
             data-project="megn-301"
         ></section>
-
         <section
             id = "research"
             data-research="mpala"
         ></section>
     </section>
 
+    <div class="content-divider"></div>
 
-    <!-- AFFILIATION / CONTEXT -->
-    <section class="card">
-        <h2>Affiliation</h2>
-        <p>
-        I conduct research with the Motion Planning, Active Learning, and Autonomy (MPALA)
-        Lab at the Colorado School of Mines, focusing on experimental swarm robotics and
-        resilient control.
-        </p>
-        <a href="about.html">More about me →</a>
+    <h2 class="section-label">Affiliation</h2>
+
+    <section class="card content-block">
+        <section class="content-card">
+            <p>
+            I conduct research with the Motion Planning, Active Learning, and Autonomy (MPALA)
+            Lab at the Colorado School of Mines, focusing on experimental swarm robotics and
+            resilient control.
+            </p>
+
+            <a class="content-title-link" href="about.html">
+            More about me →
+            </a>
+        </section>
     </section>
+
 
 </main>
 
@@ -106,6 +122,8 @@
 
 
 <div id="site-footer"></div>
+
+
 
 <script type="module" src="js/projects.js"></script>
 <script src="js/modal.js"></script>

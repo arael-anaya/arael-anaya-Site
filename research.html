@@ -13,15 +13,40 @@
     <link rel="shortcut icon" href="assets/favicon/favicon.ico">
 </head>
 <body>
+
     <div id="site-header"></div>
 
 <main class="container">
+    <div id="research-header"></div>
+    <div class="content-divider"></div>
     <div id="research"></div>
 </main>
+
+<div class="modal-overlay" id="project-modal">
+    <div class="modal">
+        <div class="modal-header">
+        <h3 id="modal-title"></h3>
+        <button class="modal-close" aria-label="Close">&times;</button>
+        </div>
+
+        <div class="modal-content">
+        <iframe id="modal-frame" title="Project Report"></iframe>
+        </div>
+    </div>
+</div>
 
 <div id="site-footer"></div>
 
 <script src="js/main.js"></script>
+
+<script type="module">
+    import { renderSectionHeader } from "./js/sectionHeader.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+        renderSectionHeader("research", "research-header");
+    });
+</script>
+
 <script type="module" src="js/research.js"></script>
 <script src="js/modal.js" ></script>
 

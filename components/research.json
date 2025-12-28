@@ -3,28 +3,55 @@
     "id": "mpala",
     "title": "MPALA Lab",
     "meta": "Motion Planning, Active Learning, and Autonomy Lab · Spring 2025 - Present",
+    "lead" : "At the Mpala lab m work has focused on blah blah and blah blah, whereI blah blah blah blah blah blah blah blahblah blah blah blah",
     "summary": "My research has spanned designing and simulating resilient consensus protocols (such as W-MSR), tuning Kalman filters for localization accuracy, and translating theoretical models of multi-agent coordination into experimental demonstrations. I enjoy the challenge of bridging rigorous mathematical analysis with hands-on implementation, refining flight dynamics, and debugging distributed systems to make autonomous swarms robust against uncertainty and adversarial interference.",
     "tags": ["research", "lab"],
     "logo": "assets/mpalaLogo.png",
-    "videos": ["3vim08XoM7w" , "cc0ZHdGcpwY" ],
+    "videos": [
+      { "id": "3vim08XoM7w", "caption": "3-drone 3D consensus demo (OptiTrack arena)" },
+      { "id": "cc0ZHdGcpwY", "caption": "2-drone 2D consensus demo (stability + convergence)" }
+    ],
     "links": [
       {
         "label": "Lab Website",
         "url": "https://www.georgekontoudis.com/lab/"
       }
     ]
+    
   },
   {
     "id": "surf-poster-2025",
     "title": "Surf Poster – Multi-Agent Visualization",
     "meta": "Research Poster for SURF · Fall 2025",
+    "lead": "I be leading",
     "summary": "A visual research artifact communicating multi-agent coordination concepts through generative surf-style graphics.",
+    "report": {
+        "title": "Surf 2025 Poster",
+        "pdf": "assets/research/surfPoster.pdf"
+        } ,
+    
+    "links": [
+      {
+        "label": "Surf Website",
+        "url": "https://www.mines.edu/undergraduate-research/undergraduate-research-opportunities/surf/"
+      },
+      {
+        "label":"Fall 2025 Symposium Recap",
+        "url" : "https://www.mines.edu/undergraduate-research/ugresearchsymposium-fall2025/"
+      },
+      {
+        "label" : "Abstract Booklet",
+        "url": "https://www.mines.edu/undergraduate-research/wp-content/uploads/sites/130/2025/09/Fall-2025-Booklet-with-Abstracts-1-2.pdf"
+      }
+    ],
+    
     "tags": ["research", "visualization"]
   },
   {
   "id": "mirror",
   "title": "MIRROR Lab",
   "meta": "Mines Interactive Robotics Research Lab · Fall 2024 - Spring 2025",
+  "lead": "I be leading",
   "summary": "Contributed to research on multi-robot teleoperation and AI-driven robotic systems with a focus on communication, coordination, and decision-making. Integrated multiple laboratory robots using ROS to enable collaborative experiments and structured data collection. Enhanced multi-teleoperation interfaces with DIARC, improving usability, responsiveness, and experimental performance. Developed and tested an AI-powered robotic assistant leveraging machine learning to improve real-time adaptability and decision-making. Co-authored a research paper on robotics and multi-agent systems (publication pending), contributing to technical writing and academic dissemination.",
   "tags": ["research", "lab", "multi-robot", "teleoperation"],
   "logo": "assets/mirrorLabLogo.png",
@@ -33,6 +60,10 @@
       "label": "Lab Website",
       "url": "https://mirrorlab.mines.edu"
     }
-  ]
-}
+  ],
+  "videos": [
+      { "id": "4lf_5ZhyD1Y", "caption": "Walk through of  Multi-Agent Interface" },
+      { "id": "D1tw7J_B_OE", "caption": "Ros Node Prototype" }
+    ]
+  }
 ]

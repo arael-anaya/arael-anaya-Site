@@ -3,6 +3,8 @@
         "id": "megn-301",
         "title": "Portable Pedal-Powered Generator",
         "meta": "MEGN 301 Final Design Project · Fall 2025",
+        "lead": "A mechanically driven power generation system designed to convert human pedaling into usable electrical energy for everyday devices.",
+        "logo": "assets/projectLogo.png",
         "summary": "Designed and manufactured a portable mechanical generator capable of producing usable DC power for phone charging and lighting.",
         "bullets": [
         "Custom transmission and gearing",
@@ -30,6 +32,8 @@
         "id": "megn-381",
         "title": "Accessible Cup Holder Bracket",
         "meta": "MEGN 381 · Manufacturing Processes · Fall 2025",
+        "lead": "An accessibility-focused mechanical component designed for real-world use, emphasizing manufacturability, strength, and cost efficiency.",
+        "logo": "assets/projectLogo.png",
         "summary": "Designed, analyzed, and manufactured a sheet-metal steel cup holder bracket for wheelchair and crutch users.",
         "bullets": [
         "Sheet-metal plasma cutting, bending, welding",
