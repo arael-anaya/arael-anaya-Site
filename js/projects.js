@@ -2,7 +2,7 @@ import { renderEntries } from "./render.js";
 
 const containers = document.querySelectorAll("#projects, [data-project]");
 
-fetch("components/projects.json")
+fetch("/components/jsons/projects.json")
     .then(r => {
     if (!r.ok) throw new Error("Failed to load projects.json");
     return r.json();

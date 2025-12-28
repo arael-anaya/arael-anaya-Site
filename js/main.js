@@ -1,3 +1,44 @@
+const HEADER_HTML = `
+    <div class="container header-row">
+        <a class="brand" href="/index.html">Arael A. Anaya</a>
+        <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
+        <nav class="nav" aria-label="Primary navigation">
+        <a href="/index.html">Main</a>
+        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/research.html">Research</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="/index.html">Main</a>
+        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/research.html">Research</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+    </nav>
+    `;
+
+    const FOOTER_HTML = `
+    <div class="container footer-content">
+        <button class="theme-toggle">Theme</button>
+        <small>© <span id="year"></span> Arael Anaya</small>
+    </div>
+`;
+
+const headerEl = document.getElementById("site-header");
+    if (headerEl) {
+        headerEl.innerHTML = HEADER_HTML;
+        initHeader();
+}
+
+const footerEl = document.getElementById("site-footer");
+    if (footerEl) {
+        footerEl.innerHTML = FOOTER_HTML;
+        initFooter();
+}
+
 function initHeader() {
     const btn = document.querySelector(".menu-button");
     const mobileNav = document.querySelector(".mobile-nav");
@@ -37,20 +78,6 @@ function initFooter() {
     if (year) year.textContent = new Date().getFullYear();
 }
 
-
-fetch("components/header.html")
-    .then(r => r.text())
-    .then(html => {
-        document.getElementById("site-header").innerHTML = html;
-        initHeader();
-    });
-
-fetch("components/footer.html")
-    .then(r => r.text())
-    .then(html => {
-        document.getElementById("site-footer").innerHTML = html;
-        initFooter();
-    });
 
 let cardObserver;
 

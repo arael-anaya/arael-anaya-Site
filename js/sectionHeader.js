@@ -2,7 +2,7 @@ export function renderSectionHeader(sectionId, containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    fetch("components/sectionHeader.json")
+    fetch("/components/jsons/sectionHeader.json")
         .then(r => r.json())
         .then(sections => {
         const s = sections[sectionId];
@@ -15,7 +15,6 @@ export function renderSectionHeader(sectionId, containerId) {
                 <div class="section-header-row">
                 ${s.lead ? `<p class="section-header-lead">${s.lead}</p>` : ""}
 
-              
                 </div>
             </header>
             `;
