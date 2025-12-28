@@ -51,3 +51,40 @@ fetch("components/footer.html")
         document.getElementById("site-footer").innerHTML = html;
         initFooter();
     });
+
+let cardObserver;
+
+function initCardFadeIn() {
+    if (cardObserver) return;
+
+    cardObserver = new IntersectionObserver(
+        entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            cardObserver.unobserve(entry.target);
+            }
+        });
+        },
+        { threshold: 0.15 }
+    );
+
+    observeCards();
+}
+
+function observeCards() {
+    const sections = document.querySelectorAll("main");
+
+    sections.forEach(section => {
+        const cards = section.querySelectorAll(".card:not(.is-visible)");
+
+        cards.forEach((card, index) => {
+        card.style.setProperty("--fade-delay", `${index * 80}ms`);
+        cardObserver.observe(card);
+        });
+    });
+}
+
+window.addEventListener("load", initCardFadeIn);
+window.observeCards = observeCards;
+

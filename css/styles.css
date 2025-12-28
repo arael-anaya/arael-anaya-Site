@@ -125,6 +125,7 @@ bounded to a smaller box than the whole page which is actually not great */
     align-items: start;
 }
 
+
 .hero h1{
     margin-top: 0;
     font-size: 2rem;
@@ -156,11 +157,62 @@ bounded to a smaller box than the whole page which is actually not great */
     font-size: 0.85rem;
 }
 
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+
+  background: color-mix(in srgb, var(--card) 85%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+
 .card {
   background: var(--card);
   border-radius: 18px;
-  padding: 1.5rem 1.75rem;
   box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+    will-change: opacity, transform;
+    opacity: 0;
+  transform: translateY(12px);
+  transition:
+  opacity 0.4s ease,
+  transform 0.4s ease;
+  transition-delay: var(--fade-delay, 0ms);
+  margin-bottom: 2rem;
+}
+
+.card:last-child {
+  margin-bottom: 1rem;
+}
+
+.card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 
@@ -246,6 +298,20 @@ bounded to a smaller box than the whole page which is actually not great */
   text-decoration: underline;
 }
 
+
+
+.project-report {
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+.action-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+
+
 @media (max-width: 800px) {
   .contact-grid {
     grid-template-columns: 1fr;
@@ -272,18 +338,44 @@ bounded to a smaller box than the whole page which is actually not great */
 .content-card {
   background: linear-gradient(
     to bottom,
-    color-mix(in srgb, var(--card) 96%, transparent),
+    color-mix(in srgb, var(--card) 97%, transparent),
     var(--card)
   );
-  border-radius: 24px;
-  padding: 3rem;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+
+  border-radius: 25px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
   max-width: 1100px;
-  margin: 0 auto 4rem;
+  margin: 0;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
+.card:hover .content-card {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+.card:focus-within .content-card {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content-card {
+    transition: none;
+  }
+
+  .card:hover .content-card,
+  .card:focus-within .content-card {
+    transform: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+}
+
+
 .content-block{
-  border-left: 5px solid var(--accent);
+  border-left: 5px solid color-mix(in srgb, var(--accent) 85%, transparent);
   /* border-right: 5px solid var(--accent);
   border-bottom: 5px solid var(--accent); */
 }
@@ -300,15 +392,41 @@ bounded to a smaller box than the whole page which is actually not great */
 }
 
 .content-header-text h2 {
-  margin-bottom: 0rem;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
   font-size: 1.8rem;
+}
+
+.content-title-link {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+
+.content-title-link::after {
+  content: "↗";
+  font-size: 0.75em;
+  margin-left: 0.35rem;
+  opacity: 0.4;
+  display: inline-block;
+  transform: translate(0, 0);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.content-title-link:hover::after {
+  transform: translate(5px, -5px);
+  opacity: 0.75;
+}
+
+.content-title-link:hover {
+  text-decoration: underline;
 }
 
 .content-meta {
   font-size: 0.85rem;
   color: var(--muted);
+    margin-top: 0rem;
   margin-bottom: 0rem; 
-  margin-top: 0rem;
 }
 
 .content-logo {
@@ -317,7 +435,12 @@ bounded to a smaller box than the whole page which is actually not great */
 
 .content-logo img {
   width: 120px;
-  opacity: 0.85;
+  opacity: 0.95;
+  filter: contrast(1);
+}
+
+.content-logo:hover img {
+  filter: contrast(1) brightness(1.75);
 }
 
 @media (max-width: 900px) {
@@ -326,67 +449,98 @@ bounded to a smaller box than the whole page which is actually not great */
   }
 }
 
+.content-logo a {
+  display: inline-block;
+}
+
+.content-logo a:hover img {
+  opacity: 0.9;
+  transform: translateY(-5px);
+}
+
 .content-lead {
-  /* font-weight: 600; */
   font-size: 1.05rem;
-  margin-bottom: 0.75rem;
+  margin-top: .5rem;
+  margin-bottom: 0rem;
 }
 
 .content-summary {
-  max-width: 65ch;
+  /* max-width: 65ch; */
   line-height: 1.65;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }
-
 
   .content-summary-wrapper {
     max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.25s ease, opacity 0.3s ease;
   }
 
   .content-body.expanded .content-summary-wrapper {
     max-height: 500px; /* safely larger than any summary */
+    opacity: 1;
   }
 
   .content-toggle {
-    background: none;
-    border: none;
-    color: var(--accent);
-    font-family: var(--font-heading);
-    font-size: 0.85rem;
-    cursor: pointer;
-    padding: 0;
-    margin-bottom: 0.5rem;
-  }
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 0rem;
+}
 
+.content-toggle:hover {
+  text-decoration: underline;
+}
 
 .content-divider {
-  height: 1px;
+  height: 3px;
   background: color-mix(in srgb, var(--text) 12%, transparent);
-  margin: 2.75rem 0 2rem;
+  margin: 1rem 0 1rem  0;
 }
+
 .content-media {
   background: color-mix(in srgb, var(--card) 92%, transparent);
   border-radius: 18px;
-  padding: 1.5rem;
 }
 
 .content-media h3 {
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: .5rem;
 }
 
 .content-links {
-  margin-top: 1.5rem;
+  margin-top: 0rem;
+  margin-bottom: .5rem;
   display: flex;
-  gap: 0.75rem;
+
   flex-wrap: wrap;
+    gap: 0.75rem; 
+}
+/* Secondary action links: simple, academic */
+
+.secondary-action:hover {
+  transform: translateY(-2px);
+  text-decoration-color: var(--text);
+  text-decoration: underline;
+
+}
+.secondary-action:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
-.content-links:hover{ 
-  opacity: 1; 
-  text-decoration: underline; 
-}
 
+.card:hover .video iframe,
+.card:focus-within .video iframe {
+  filter: saturate(0.8) contrast(1) brightness(1);
+  transition: filter 0.25s ease;
+}
 
 /*
 VIDEO STYLING
@@ -413,9 +567,6 @@ VIDEO STYLING
 html[data-theme="dark"] .video-caption {
   color: color-mix(in srgb, var(--muted) 90%, white 10%);
 }
-
-
-
 
 .video-scroll{
   display: flex;
