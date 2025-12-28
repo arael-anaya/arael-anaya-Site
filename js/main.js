@@ -88,3 +88,6 @@ function observeCards() {
 window.addEventListener("load", initCardFadeIn);
 window.observeCards = observeCards;
 
+card.style.setProperty("--fade-delay", `${index * 50}ms`);
+
+

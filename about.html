@@ -22,10 +22,19 @@
     <div id="site-header"></div>
 
 <main class="container">
-    <section class="card">
+    <div id="about-header"></div>
+    <div class="content-divider"></div>
+
+    <nav class="section-subnav">
+    <a href="#about-hero">Overview</a>
+    <a href="#resume">Resume</a>
+    <a href="#background">Background</a>
+    </nav>
+
+    <section class="card" id = "about-hero">
         <section class="hero">
             <div class="hero-text">
-            <h1>About Me</h1>
+
                 <p>
                     I am a Mechanical Engineering student at the Colorado School of Mines with a minor in Robotics & Intelligent Systems, 
                     pursuing a Masters in Robotics. My current work focuses on distributed robotics and resilient multi-agent systems. 
@@ -33,12 +42,8 @@
                     and ROS 2 to test consensus and resilient control algorithms under real-world conditions.
                 </p>
 
-                <div class="links-row">
-                    <!--<a class="chip" href="publications.html">Publications</a>
-                    <a class="chip" href="https://scholar.google.com/" target="_blank" rel="noopener">Scholar</a>-->
-                    <a class="chip" href="https://github.com/arael-anaya" target="_blank" rel="noopener">GitHub</a>
-                    <a class="chip" href="https://www.linkedin.com/in/arael-anaya" target="_blank" rel="noopener">LinkedIn</a>
-                </div>
+                <div class="links-row" id="about-links"></div>
+
 
                 <div class="contact-block">
                 <div><strong>Email:</strong> Arael.A.Anaya@gmail.com</div>
@@ -52,7 +57,7 @@
         </section>
     </section>
 
-    <section class="card content-block">
+    <section class="card content-block" id = "resume">
         <section class="content-card">
             <h2>Resume</h2>
 
@@ -76,7 +81,7 @@
         </section>
         </section>
 
-        <section class="card content-block">
+        <section class="card content-block" id = "background">
             <section class="content-card">
                 <h2>Background & Interests</h2>
                 <p class="content-summary">
@@ -96,5 +101,18 @@
 
 
 <script src="js/main.js"></script>
+
+<script type="module">
+    import { renderSectionHeader } from "./js/sectionHeader.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+        renderSectionHeader("about", "about-header");
+    });
+</script>
+
+
+
+<script type="module" src="js/about.js"></script>
+
 </body>
 </html>

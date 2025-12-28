@@ -17,7 +17,8 @@
     <div id="site-header"></div>
 
 <main class="container">
-    <h1>Past Work</h1>
+    <div id="projects-header"></div>
+    <div class="content-divider"></div>
     <section id="projects"></section>
 
 </main>
@@ -39,6 +40,15 @@
 <div id="site-footer"></div>
 
 <script src="js/main.js" ></script>
+
+<script type="module">
+    import { renderSectionHeader } from "./js/sectionHeader.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+        renderSectionHeader("projects", "projects-header");
+    });
+</script>
+
 <script src="js/modal.js" ></script>
 <script type="module" src="js/projects.js"></script>
 
