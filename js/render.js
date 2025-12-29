@@ -1,14 +1,19 @@
 // js/render.js
 
-// ---- BASE-AWARE ASSET RESOLUTION ----
-const BASE = window.__BASE__ || "";
-
-function resolveAssetPath(path) {
+function resolveAsset(path) {
     if (!path) return "";
-    if (path.startsWith("http")) return path;          // external
-    if (path.startsWith("/")) return `${BASE}${path}`; // root-relative
-    return `${BASE}/${path.replace(/^\.?\//, "")}`;    // relative
+    if (path.startsWith("http")) return path;
+
+    // normalize path (remove leading ./ or /)
+    const clean = path.replace(/^\.?\//, "");
+
+    // site root = parent of /js/
+    const siteRoot = new URL("..", import.meta.url);
+
+    return new URL(clean, siteRoot).pathname;
 }
+
+
 
 // -----------------------------------
 
@@ -74,14 +79,14 @@ export function renderEntries(entries, container) {
                                     aria-label="Visit ${e.title}"
                                 >
                                     <img
-                                        src="${resolveAssetPath(e.logo)}"
+                                        src="${resolveAsset(e.logo)}"
                                         alt="${e.title} logo"
                                         loading="lazy"
                                     >
                                 </a>
                             ` : `
                                 <img
-                                    src="${resolveAssetPath(e.logo)}"
+                                    src="${resolveAsset(e.logo)}"
                                     alt="${e.title} logo"
                                     loading="lazy"
                                 >
@@ -135,7 +140,7 @@ export function renderEntries(entries, container) {
                             <div class="content-actions">
                                 <button
                                     class="action-btn action-pdf"
-                                    data-report="${resolveAssetPath(e.report.pdf)}"
+                                    data-report="${resolveAsset(e.report.pdf)}"
                                     data-title="${e.report.title}"
                                 >
                                     ${e.report.title} · PDF
