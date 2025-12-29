@@ -1,0 +1,31 @@
+{
+    "books": [
+        { "query": "Godel Escher Bach" },
+        { "query": "The Structure of Scientific Revolutions" }
+    ],
+  "songs": [
+    {
+        "query": "Motion Picture Soundtrack Radiohead",
+        "fallback": {
+        "title": "Motion Picture Soundtrack",
+        "subtitle": "Radiohead",
+        "meta": "2000"
+        }
+    },
+    {
+        "query": "Reckoner Radiohead",
+        "fallback": {
+        "title": "Reckoner",
+        "subtitle": "Radiohead",
+        "meta": "2007"
+        }
+    }
+    ],
+    "movies": [
+        { "query": "Her" },
+        { "query": "Blade Runner 2049" },
+        { "query": "Arrival" }
+    ],
+
+    "youtubers": []
+}

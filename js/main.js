@@ -8,6 +8,7 @@ const HEADER_HTML = `
         <a href="../pages/research.html">Research</a>
         <a href="../pages/about.html">About</a>
         <a href="../pages/contact.html">Contact</a>
+        <a href="../pages/favorites.html">Favorites</a>
         </nav>
     </div>
 
@@ -17,6 +18,7 @@ const HEADER_HTML = `
         <a href="../pages/research.html">Research</a>
         <a href="../pages/about.html">About</a>
         <a href="../pages/contact.html">Contact</a>
+        <a href="../pages/favorites.html">Favorites</a>
     </nav>
     `;
 
