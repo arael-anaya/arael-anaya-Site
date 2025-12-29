@@ -3,20 +3,20 @@ const HEADER_HTML = `
         <a class="brand" href="/index.html">Arael A. Anaya</a>
         <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
         <nav class="nav" aria-label="Primary navigation">
-        <a href="/index.html">Main</a>
-        <a href="/pages/projects.html">Projects</a>
-        <a href="/pages/research.html">Research</a>
-        <a href="/pages/about.html">About</a>
-        <a href="/pages/contact.html">Contact</a>
+        <a href="./index.html">Main</a>
+        <a href="./pages/projects.html">Projects</a>
+        <a href="./pages/research.html">Research</a>
+        <a href="./pages/about.html">About</a>
+        <a href="./pages/contact.html">Contact</a>
         </nav>
     </div>
 
     <nav class="mobile-nav" aria-label="Mobile navigation">
-        <a href="/index.html">Main</a>
-        <a href="/pages/projects.html">Projects</a>
-        <a href="/pages/research.html">Research</a>
-        <a href="/pages/about.html">About</a>
-        <a href="/pages/contact.html">Contact</a>
+        <a href="./index.html">Main</a>
+        <a href="./pages/projects.html">Projects</a>
+        <a href="./pages/research.html">Research</a>
+        <a href="./pages/about.html">About</a>
+        <a href="./pages/contact.html">Contact</a>
 
     </nav>
     `;
