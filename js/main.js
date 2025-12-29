@@ -1,6 +1,7 @@
-const BASE = window.location.pathname.split("/")[1]
-    ? `/${window.location.pathname.split("/")[1]}`
-    : "";
+const BASE = window.location.hostname.includes("github.io")
+  ? `/${window.location.pathname.split("/")[1]}`
+  : "";
+
 
 const HEADER_HTML = `
     <div class="container header-row">
