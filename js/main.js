@@ -1,27 +1,31 @@
+const BASE = window.location.hostname.includes("github.io")
+    ? `/${window.location.pathname.split("/")[1]}`
+    : "";
+window.__BASE__ = BASE;
 
 
 const HEADER_HTML = `
     <div class="container header-row">
-        <a class="brand" href="./index.html">Arael A. Anaya</a>
+        <a class="brand" href="${BASE}/index.html">Arael A. Anaya</a>
         <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
         <nav class="nav" aria-label="Primary navigation">
-        <a href="/index.html">Main</a>
-        <a href="/pages/projects.html">Projects</a>
-        <a href="/pages/research.html">Research</a>
-        <a href="/pages/about.html">About</a>
-        <a href="/pages/contact.html">Contact</a>
+        <a href="${BASE}/index.html">Main</a>
+        <a href="${BASE}/pages/projects.html">Projects</a>
+        <a href="${BASE}/pages/research.html">Research</a>
+        <a href="${BASE}/pages/about.html">About</a>
+        <a href="${BASE}/pages/contact.html">Contact</a>
         </nav>
     </div>
 
     <nav class="mobile-nav" aria-label="Mobile navigation">
-        <a href="/index.html">Main</a>
-        <a href="/pages/projects.html">Projects</a>
-        <a href="/pages/research.html">Research</a>
-        <a href="/pages/about.html">About</a>
-        <a href="/pages/contact.html">Contact</a>
-
+        <a href="${BASE}/index.html">Main</a>
+        <a href="${BASE}/pages/projects.html">Projects</a>
+        <a href="${BASE}/pages/research.html">Research</a>
+        <a href="${BASE}/pages/about.html">About</a>
+        <a href="${BASE}/pages/contact.html">Contact</a>
     </nav>
-    `;
+`;
+
 
     const FOOTER_HTML = `
     <div class="container footer-content">
@@ -169,11 +173,11 @@ const KONAMI = [
     }
     });
 
-    function unlockFavorites() {
-    sessionStorage.setItem("favoritesUnlocked", "true");
-    window.location.href = "../pages/favorites.html";
-}
 
+function unlockFavorites() {
+    sessionStorage.setItem("favoritesUnlocked", "true");
+    window.location.href = `${BASE}/pages/favorites.html`;
+}
 
 // js/main.js
 document.addEventListener("DOMContentLoaded", () => {
@@ -215,7 +219,7 @@ switch (page) {
         case "favorites":
     
         if (!sessionStorage.getItem("favoritesUnlocked")) {
-            window.location.replace("/index.html");
+            window.location.replace("${BASE}/index.html");
         }
     break;
 }
@@ -227,4 +231,7 @@ if (window.location.hash) {
         ?.scrollIntoView({ behavior: "smooth" });
     });
 }
+
+import { applySEO } from "./seo.js";
+applySEO(page);
 

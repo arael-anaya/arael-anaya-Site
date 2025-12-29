@@ -2,7 +2,7 @@ export function renderLinks(containerId, filterLabel = null) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    fetch(new URL("../components/links.json", import.meta.url))
+    fetch(new URL("../components/jsons/links.json", import.meta.url))
 
         .then(r => r.json())
         .then(links => {
