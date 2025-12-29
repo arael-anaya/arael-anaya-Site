@@ -2,7 +2,7 @@ export function renderSectionHeader(sectionId, containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    fetch("/components/jsons/sectionHeader.json")
+    fetch("../components/jsons/sectionHeader.json")
         .then(r => r.json())
         .then(sections => {
         const s = sections[sectionId];

@@ -7,7 +7,7 @@ const containers = document.querySelectorAll("#projects, [data-project]");
 if (!containers.length) {
     console.warn("No project containers found on this page.");
     } else {
-    fetch("/components/jsons/pages/projects.json")
+    fetch("./components/jsons/pages/projects.json")
         .then(r => {
         if (!r.ok) throw new Error("Failed to load projects.json");
         return r.json();
