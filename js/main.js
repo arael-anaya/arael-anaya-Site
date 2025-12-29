@@ -1,6 +1,8 @@
+
+
 const HEADER_HTML = `
     <div class="container header-row">
-        <a class="brand" href="/index.html">Arael A. Anaya</a>
+        <a class="brand" href="./index.html">Arael A. Anaya</a>
         <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
         <nav class="nav" aria-label="Primary navigation">
         <a href="./index.html">Main</a>
@@ -177,7 +179,7 @@ const KONAMI = [
 document.addEventListener("DOMContentLoaded", () => {
     if (document.body.dataset.requiresAuth === "favorites") {
         if (!sessionStorage.getItem("favoritesUnlocked")) {
-        window.location.replace("/index.html");
+        window.location.replace("./index.html");
         }
     }
 });
@@ -218,4 +220,11 @@ switch (page) {
     break;
 }
 
+if (window.location.hash) {
+    requestAnimationFrame(() => {
+        document
+        .querySelector(window.location.hash)
+        ?.scrollIntoView({ behavior: "smooth" });
+    });
+}
 

@@ -47,7 +47,8 @@ function renderNews() {
     attachScrollMask(); // 👈 THIS is the missing piece
 }
 
-fetch("/components/jsons/news.json")
+fetch(new URL("../components/jsons/news.json", import.meta.url))
+
     .then(r => r.json())
     .then(items => {
         newsItems = items;
