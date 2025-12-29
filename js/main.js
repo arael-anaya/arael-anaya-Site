@@ -1,4 +1,6 @@
-const BASE = "/arael-anaya-Site";
+const BASE = window.location.pathname.split("/")[1]
+    ? `/${window.location.pathname.split("/")[1]}`
+    : "";
 
 const HEADER_HTML = `
     <div class="container header-row">
