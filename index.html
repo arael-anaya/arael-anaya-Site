@@ -1,193 +1,202 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Arael Anaya</title>
-    <link rel="stylesheet" href="css/styles.css" />
-
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet"
+    >
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
 </head>
+
 <body>
+    <body data-page="home">
+
     <div id="site-header"></div>
 
-<main class="container">
+    <main class="container">
 
-    <section class="home-hero">
-        <h1 class="home-title">
-            Robotics, Control, and Multi-Agent Systems
-        </h1>
+        <section class="home-hero" id="home-hero">
+            <h1 class="home-title">
+                Robotics, Control, and Multi-Agent Systems
+            </h1>
 
-        <p class="home-intro">
-            I design and experimentally validate resilient multi-agent robotic systems,
-            with a focus on aerial swarms, distributed control, and real-world autonomy.
-            My work bridges theoretical guarantees with hands-on implementation using
-            Crazyflie drones, motion capture, and ROS 2.
-        </p>
+            <p class="home-intro">
+                I design and experimentally validate resilient multi-agent robotic systems,
+                with a focus on aerial swarms, distributed control, and real-world autonomy.
+                My work bridges theoretical guarantees with hands-on implementation using
+                Crazyflie drones, motion capture, and ROS 2.
+            </p>
 
-        <div class="home-actions">
-            <button class="action-btn action-pdf"
-                data-report= "/assets/Resume - Arael Anaya .pdf"
-                data-title= "Resume">
-                View Resume
-            </button>
-            <a class="chip" href="/pages/projects.html">View Projects</a>
-            <a class="chip" href="/pages/research.html">View Research</a>
-        </div>
-    </section>
+            <div class="home-actions">
+                <button class="action-btn action-pdf">
+                    View Resume
+                </button>
 
-    <div class="content-divider"></div>
+                <span class="home-secondary-inline">
+                    <a href="/pages/projects.html">Projects</a>
+                    <span class="sep">·</span>
+                    <a href="/pages/research.html">Research</a>
+                </span>
+            </div>
 
-    <h2 class="section-label">Research Focus</h2>
 
-    <section class="card content-block">
-        <section class="content-card">
-            
-            <ul class="focus-grid">
-            <li>
-                <strong>Distributed & Resilient Control</strong><br>
-                Consensus, W-MSR, fault-tolerant multi-agent coordination.
-            </li>
-            <li>
-                <strong>Aerial Swarm Robotics</strong><br>
-                Crazyflie platforms, experimental validation, swarm behaviors.
-            </li>
-            <li>
-                <strong>State Estimation & Localization</strong><br>
-                Kalman filtering, motion capture integration, robustness analysis.
-            </li>
-            <li>
-                <strong>Real-World Autonomy</strong><br>
-                Bridging theory with hardware-in-the-loop testing.
-            </li>
-            </ul>
         </section>
-    </section>
+        <nav class="section-subnav">
+            <a href="#research-focus">Research</a>
+            <a href="#featured">Featured</a>
+            <a href="#news">News</a>
+            <a href="#youtubeChannel">Youtube Channel</a>
+            <a href="#affiliation">Affiliation</a>
+        </nav>
 
-    <div class="content-divider"></div>
+        <div class="content-divider"></div>
 
-    <h2 class="section-label">Featured</h2>
-
-    <section class="card">
-        <section
-            id="featured-project"
-            data-project="megn-301"
-        ></section>
-        <section
-            id = "featured-research"
-            data-research="mpala"
-        ></section>
-    </section>
-
-    <div class="content-divider"></div>
-
-    <h2 class="section-label">News</h2>
+        <h2 class="section-label"  id="research-focus" >Research Focus</h2>
 
         <section class="card content-block">
             <section class="content-card">
-                <div class="news-header">
-                    <button class="news-sort-toggle" aria-expanded="false">
-                    Newest first ↓
-                    </button>
-                </div>
-                <div class="news-scroll-mask">
-                    <div id="news"></div>
-                </div>       
+                
+                <ul class="focus-grid">
+                <li>
+                    <strong>Distributed & Resilient Control</strong><br>
+                    Consensus, W-MSR, fault-tolerant multi-agent coordination.
+                </li>
+                <li>
+                    <strong>Aerial Swarm Robotics</strong><br>
+                    Crazyflie platforms, experimental validation, swarm behaviors.
+                </li>
+                <li>
+                    <strong>State Estimation & Localization</strong><br>
+                    Kalman filtering, motion capture integration, robustness analysis.
+                </li>
+                <li>
+                    <strong>Real-World Autonomy</strong><br>
+                    Bridging theory with hardware-in-the-loop testing.
+                </li>
+                </ul>
             </section>
-
         </section>
-    
-    <div class="content-divider"></div>
-    
 
-    <h2 class="section-label">Experimental Videos</h2>
+        <div class="content-divider"></div>
 
-    <section class="card content-block">
-        <section class="content-card">
-            <div class="video-scroll">
-                <figure class="video">
-                    <iframe
-                    src="https://www.youtube.com/embed/VIDEO_ID_1"
-                    loading="lazy"
-                    allowfullscreen>
-                    </iframe>
-                    <figcaption class="video-caption">
-                    Multi-agent consensus with Crazyflie drones
-                    </figcaption>
-                </figure>
+        <h2 class="section-label" id="featured" >Featured</h2>
 
-                <figure class="video">
-                    <iframe
-                    src="https://www.youtube.com/embed/VIDEO_ID_2"
-                    loading="lazy"
-                    allowfullscreen>
-                    </iframe>
-                    <figcaption class="video-caption">
-                    Resilient control under communication faults
-                    </figcaption>
-                </figure>
+        <section class="card">
+            <section
+                id="featured-project"
+                data-project="megn-301"
+            ></section>
+            <section
+                id = "featured-research"
+                data-research="mpala"
+            ></section>
+        </section>
+
+        <div class="content-divider"></div>
+
+        <h2 class="section-label" id="news" >News</h2>
+
+            <section class="card content-block">
+                <section class="content-card">
+                    <div class="news-header">
+                        <button class="news-sort-toggle" aria-expanded="false">
+                        Newest first ↓
+                        </button>
+                    </div>
+                    <div class="news-scroll-mask">
+                        <div id="news-list"></div>
+                    </div>       
+                </section>
+
+            </section>
+        
+        <div class="content-divider"></div>
+        
+
+        <h2 class="section-label" id="youtubeChannel">Experimental Videos</h2>
+
+        <section class="card content-block">
+            <section class="content-card">
+                <div class="video-scroll">
+                    <figure class="video">
+                        <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID_1"
+                        loading="lazy"
+                        allowfullscreen>
+                        </iframe>
+                        <figcaption class="video-caption">
+                        Multi-agent consensus with Crazyflie drones
+                        </figcaption>
+                    </figure>
+
+                    <figure class="video">
+                        <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID_2"
+                        loading="lazy"
+                        allowfullscreen>
+                        </iframe>
+                        <figcaption class="video-caption">
+                        Resilient control under communication faults
+                        </figcaption>
+                    </figure>
+                </div>
+            <div id="youtube-links" class="content-links"></div>
+            </section>
+        </section>
+
+
+        <div class="content-divider"></div>
+
+        <h2 class="section-label" id="affiliation">Affiliation</h2>
+
+        <section class="card content-block">
+            <section class="content-card">
+                <p>
+                I conduct research with the Motion Planning, Active Learning, and Autonomy (MPALA)
+                Lab at the Colorado School of Mines, focusing on experimental swarm robotics and
+                resilient control.
+                </p>
+
+                <a class="content-title-link" href="../pages/about.html">>
+                More about me 
+                </a>
+            </section>
+        </section>
+
+    </main>
+
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal">
+            <div class="modal-header">
+            <h3 id="modal-title"></h3>
+            <button class="modal-close" aria-label="Close">&times;</button>
             </div>
-        <div id="youtube-links" class="content-links"></div>
-        </section>
-    </section>
 
-
-    <div class="content-divider"></div>
-
-    <h2 class="section-label">Affiliation</h2>
-
-    <section class="card content-block">
-        <section class="content-card">
-            <p>
-            I conduct research with the Motion Planning, Active Learning, and Autonomy (MPALA)
-            Lab at the Colorado School of Mines, focusing on experimental swarm robotics and
-            resilient control.
-            </p>
-
-            <a class="content-title-link" href="../pages/about.html">>
-            More about me 
-            </a>
-        </section>
-    </section>
-
-
-</main>
-
-<div class="modal-overlay" id="project-modal">
-    <div class="modal">
-        <div class="modal-header">
-        <h3 id="modal-title"></h3>
-        <button class="modal-close" aria-label="Close">&times;</button>
-        </div>
-
-        <div class="modal-content">
-        <iframe id="modal-frame" title="Project Report"></iframe>
+            <div class="modal-content">
+            <iframe id="modal-frame" title="Project Report"></iframe>
+            </div>
         </div>
     </div>
-</div>
+    <div id="site-footer"></div>
 
-<div id="site-footer"></div>
-
-
-<script type="module" src="js/main.js"></script>
-
-<script src="js/modal.js"></script>
-<script type="module" src="js/projects.js"></script>
-<script type="module" src="js/research.js"></script>
-<script src="js/news.js"></script>
-
-
-
+    <script type="module" src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+    <script type="module" src="js/projects.js"></script>
+    <script type="module" src="js/research.js"></script>
+    <script src="js/news.js"></script>
 
 </body>
 </html>

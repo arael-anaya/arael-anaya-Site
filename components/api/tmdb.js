@@ -1,4 +1,8 @@
-const TMDB_API_KEY = "e2311bda6f01c9b4b57c4fc3f6f5ff42";
+import { API_KEYS } from "./config.js";
+
+const TMDB_API_KEY = API_KEYS.TMDB;
+
+
 
 export async function fetchMovie(query) {
     const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}`;

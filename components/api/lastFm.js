@@ -1,4 +1,6 @@
-const LASTFM_API_KEY = "a25ada10d1834fff0fd3ad7b8d5489b3";
+import { API_KEYS } from "./config.js";
+
+const LASTFM_API_KEY = API_KEYS.LASTFM;
 
 export async function fetchSong(query) {
     // Expect "Track Artist"

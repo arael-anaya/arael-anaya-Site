@@ -1,36 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Arael Anaya</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet"
+    >
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
 </head>
 <body>
+    <body data-page="about">
     <div id="site-header"></div>
 
 <main class="container">
     <div id="about-header"></div>
     <div class="content-divider"></div>
-
     <nav class="section-subnav">
     <a href="#about-hero">Overview</a>
     <a href="#resume">Resume</a>
     <a href="#background">Background</a>
     </nav>
-
     <section class="card" id = "about-hero">
         <section class="hero">
             <div class="hero-text">
@@ -92,28 +93,11 @@
                 </p>
             </section>
         </section>
-
-
-
 </main>
 
 <div id="site-footer"></div>
 
-
 <script type="module" src="../js/main.js"></script>
-
-
-
-<script type="module">
-    import { renderSectionHeader } from "../js/sectionHeader.js";
-
-    document.addEventListener("DOMContentLoaded", () => {
-        renderSectionHeader("about", "about-header");
-    });
-</script>
-
-
-
 <script type="module" src="../js/about.js"></script>
 
 </body>
