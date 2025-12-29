@@ -232,3 +232,6 @@ if (window.location.hash) {
     });
 }
 
+import { applySEO } from "./seo.js";
+applySEO(page);
+
