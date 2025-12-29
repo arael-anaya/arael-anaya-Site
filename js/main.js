@@ -1,6 +1,7 @@
 const BASE = window.location.hostname.includes("github.io")
-  ? `/${window.location.pathname.split("/")[1]}`
-  : "";
+    ? `/${window.location.pathname.split("/")[1]}`
+    : "";
+window.__BASE__ = BASE;
 
 
 const HEADER_HTML = `
@@ -172,11 +173,11 @@ const KONAMI = [
     }
     });
 
-    function unlockFavorites() {
-    sessionStorage.setItem("favoritesUnlocked", "true");
-    window.location.href = "${BASE}/pages/favorites.html";
-}
 
+function unlockFavorites() {
+    sessionStorage.setItem("favoritesUnlocked", "true");
+    window.location.href = `${BASE}/pages/favorites.html`;
+}
 
 // js/main.js
 document.addEventListener("DOMContentLoaded", () => {
