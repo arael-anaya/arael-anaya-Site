@@ -173,7 +173,7 @@ const KONAMI = [
 
     function unlockFavorites() {
     sessionStorage.setItem("favoritesUnlocked", "true");
-    window.location.href = "../pages/favorites.html";
+    window.location.href = "${BASE}/pages/favorites.html";
 }
 
 
@@ -217,7 +217,7 @@ switch (page) {
         case "favorites":
     
         if (!sessionStorage.getItem("favoritesUnlocked")) {
-            window.location.replace("/index.html");
+            window.location.replace("${BASE}/index.html");
         }
     break;
 }
