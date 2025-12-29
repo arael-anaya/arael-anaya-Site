@@ -2,7 +2,8 @@ export function renderLinks(containerId, filterLabel = null) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    fetch("/components/jsons/links.json")
+    fetch(new URL("../components/links.json", import.meta.url))
+
         .then(r => r.json())
         .then(links => {
             let filtered = filterLabel
