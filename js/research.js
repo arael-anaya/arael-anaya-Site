@@ -2,7 +2,7 @@ import { renderEntries } from "./render.js";
 
 const containers = document.querySelectorAll("#research, [data-research]");
 
-fetch("/components/jsons/pages/research.json")
+fetch("./components/jsons/pages/research.json")
     .then(r => {
     if (!r.ok) throw new Error("Failed to load research.json");
     return r.json();
