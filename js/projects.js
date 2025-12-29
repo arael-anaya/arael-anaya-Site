@@ -1,13 +1,11 @@
 import { renderEntries } from "./render.js";
 
-// Find all valid project containers
-const containers = document.querySelectorAll("#projects, [data-project]");
+document.addEventListener("DOMContentLoaded", () => {
+  // Accept either a page container (#projects) or any featured containers ([data-project])
+    const containers = document.querySelectorAll("#projects, [data-project]");
+    if (!containers.length) return;
 
-// If no containers exist on this page, do nothing safely
-if (!containers.length) {
-    console.warn("No project containers found on this page.");
-    } else {
-    fetch("./components/jsons/pages/projects.json")
+    fetch(new URL("../components/jsons/pages/projects.json", import.meta.url))
         .then(r => {
         if (!r.ok) throw new Error("Failed to load projects.json");
         return r.json();
@@ -15,13 +13,9 @@ if (!containers.length) {
         .then(entries => {
         containers.forEach(container => {
             const attr = container.dataset.project;
-
-            // If data-project exists, render only those IDs
+            // If data-project exists, filter; otherwise render all
             const ids = attr ? attr.split(/[\s,]+/) : null;
-
-            const filtered = ids
-            ? entries.filter(e => ids.includes(e.id))
-            : entries;
+            const filtered = ids ? entries.filter(e => ids.includes(e.id)) : entries;
 
             renderEntries(filtered, container);
         });
@@ -29,7 +23,7 @@ if (!containers.length) {
         .catch(err => {
         console.error(err);
         containers.forEach(c => {
-            c.innerHTML = "<p>Failed to load projects entries.</p>";
+            c.innerHTML = "<p>Failed to load project entries.</p>";
         });
         });
-}
+});

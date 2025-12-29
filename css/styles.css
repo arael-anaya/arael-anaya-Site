@@ -1,6 +1,6 @@
 /* =========================================================
-   1) ROOT TOKENS
-   Site-wide colors, typography, and layout limits
+  1) ROOT TOKENS
+  Site-wide colors, typography, and layout limits
 ========================================================= */
 
 :root {
@@ -18,8 +18,8 @@
 
 
 /* =========================================================
-   2) GLOBAL BASE
-   Reset + base typography + smooth scrolling
+  2) GLOBAL BASE
+  Reset + base typography + smooth scrolling
 ========================================================= */
 
 * { box-sizing: border-box; }
