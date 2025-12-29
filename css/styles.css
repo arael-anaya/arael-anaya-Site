@@ -1,22 +1,38 @@
-:root{
-    --bg: #ffffff;
-    --text: #111827;
-    --muted: #4b5563;
-    --accent: #1f3b67;
-    --card: #f3f4f6;
-    --max: 980px;
+/* =========================================================
+   1) ROOT TOKENS
+   Site-wide colors, typography, and layout limits
+========================================================= */
 
-    /* Typography */
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #4b5563;
+  --accent: #1f3b67;
+  --card: #f3f4f6;
+  --max: 980px;
+
+  /* Typography */
   --font-body: "Open Sans", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
   --font-heading: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
 }
 
-*{ box-sizing: border-box; }
-body{
+
+/* =========================================================
+   2) GLOBAL BASE
+   Reset + base typography + smooth scrolling
+========================================================= */
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   margin: 0;
   font-family: var(--font-body);
-  font-size: 18px;          /* rule: ≥16px, modern = 18px */
-  line-height: 1.6;         /* rule: 1.5–1.6 */
+  font-size: 18px;          /* modern readable base */
+  line-height: 1.6;         /* readable paragraph rhythm */
   background: var(--bg);
   color: var(--text);
 }
@@ -28,12 +44,12 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1 {
-  font-size: 2.25rem;   /* ~40px */
+  font-size: 2.25rem;       /* ~40px */
   margin-bottom: 0.75rem;
 }
 
 h2 {
-  font-size: 1.5rem;    /* ~27px */
+  font-size: 1.5rem;        /* ~27px */
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -41,32 +57,37 @@ h2 {
 h3 {
   font-size: 1.2rem;
   margin-bottom: 0;
-  margin-top: .75rem;
-}
-
-html {
-  scroll-behavior: smooth;
+  margin-top: 0.75rem;
 }
 
 
-/* Come Back and edit this, this is basically whats keeping the whole site 
-bounded to a smaller box than the whole page which is actually not great */
-.container{
-    width: min(var(--max), calc(100% - 2rem));
-    margin: 0 auto;
+/* =========================================================
+   3) LAYOUT CONTAINER
+   Keeps site bounded to a readable max width
+========================================================= */
+
+.container {
+  width: min(var(--max), calc(100% - 2rem));
+  margin: 0 auto;
 }
 
-#site-header{
-    background: var(--accent);
-    color: white;
+
+/* =========================================================
+   4) HEADER + NAVIGATION
+   Desktop nav + mobile nav scaffolding
+========================================================= */
+
+#site-header {
+  background: var(--accent);
+  color: white;
 }
 
-.header-row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0;
-    gap: 1rem;
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 1rem;
 }
 
 .brand {
@@ -75,56 +96,60 @@ bounded to a smaller box than the whole page which is actually not great */
   font-family: var(--font-heading);
   font-weight: 700;
 
-  font-size: 1.75rem;     /* bigger name */
-  line-height: 1;         /* CRITICAL: prevents header growth */
+  font-size: 1.75rem;
+  line-height: 1;           /* prevents header growth */
   letter-spacing: 0.02em;
 
   display: flex;
-  align-items: center;    /* vertically centers text inside header */
+  align-items: center;
 }
 
-.nav{
-    display: flex;
-    gap: 1rem;
+.nav {
+  display: flex;
+  gap: 1rem;
 }
 
-.nav a{
-    color: white;
-    text-decoration: none;
-    opacity: 0.95;
+.nav a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.95;
 }
 
-.nav a:hover{ 
-  opacity: 1; 
-  text-decoration: underline; 
+.nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
-.menu-button{
-    display: none;
-    border: 0;
-    background: transparent;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
+.menu-button {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.mobile-nav{
-    display: none;
-    padding: 0.75rem 0;
-    border-top: 1px solid rgba(255,255,255,0.2);
+.mobile-nav {
+  display: none;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(255,255,255,0.2);
 }
 
-.mobile-nav a{
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 0;
+.mobile-nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
 }
 
-/* SECTION HEADER*/
+
+/* =========================================================
+   5) SECTION HEADERS
+   Used on pages like Research/Projects
+========================================================= */
 
 .section-header {
-  margin: .5rem 0 0rem;
+  margin: 0.5rem 0 0;
 }
 
 .section-header-title {
@@ -137,14 +162,14 @@ bounded to a smaller box than the whole page which is actually not great */
   justify-content: space-between;
   gap: 2rem;
   margin-top: 0.35rem;
-  margin-bottom:0rem;
+  margin-bottom: 0;
 }
 
 .section-header-lead {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-top: 0rem;
-    margin-bottom: 0rem; 
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .section-header-actions {
@@ -162,6 +187,7 @@ bounded to a smaller box than the whole page which is actually not great */
   margin: 0.5rem 0 0.75rem;
 }
 
+/* Home hero underline accent bar */
 .home-hero::after {
   content: "";
   display: block;
@@ -172,9 +198,7 @@ bounded to a smaller box than the whole page which is actually not great */
   border-radius: 2px;
 }
 
-
-
-/* Responsive */
+/* Section header responsiveness */
 @media (max-width: 800px) {
   .section-header-row {
     flex-direction: column;
@@ -183,9 +207,11 @@ bounded to a smaller box than the whole page which is actually not great */
   }
 }
 
-/* -------------------------
-  SECTION SUB-NAV
-------------------------- */
+
+/* =========================================================
+   6) SECTION SUB-NAV
+   Tab-like anchors within pages
+========================================================= */
 
 .section-subnav {
   display: flex;
@@ -223,45 +249,71 @@ bounded to a smaller box than the whole page which is actually not great */
 }
 
 
+/* =========================================================
+   7) HERO (HOME PAGE)
+========================================================= */
 
-.hero{
-    display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: 2rem;
-    padding: 1.5rem;
-    align-items: start;
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 2rem;
+  padding: 1.5rem;
+  align-items: start;
 }
 
-
-.hero h1{
-    margin-top: 0;
-    font-size: 2rem;
+.hero h1 {
+  margin-top: 0;
+  font-size: 2rem;
 }
 
-.hero-text p{
+.hero-text p {
   color: var(--muted);
-  font-size: 1rem;   /* inherit from body = 18px */
+  font-size: 1rem;
 }
 
-.links-row{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: .25rem;
-    margin-bottom: .5rem;
+.hero-photo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.chip{
-    display: inline-block;
-    background: var(--card);
-    color: var(--text);
-    text-decoration: none;
-    padding: 0.4rem 0.7rem;
-    border-radius: 999px;
-    font-weight: 600;
+.hero-photo img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 16px;
+  display: block;
+}
 
-    font-family: var(--font-heading);
-    font-size: 0.85rem;
+
+/* =========================================================
+   8) LINKS, CHIPS, ACTION BUTTONS
+   Used for link rows and consistent button language
+========================================================= */
+
+.links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.chip {
+  display: inline-block;
+  background: var(--card);
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .action-btn {
@@ -288,18 +340,59 @@ bounded to a smaller box than the whole page which is actually not great */
     box-shadow 0.18s ease;
 }
 
+/* Single focus rule for action buttons (duplicate removed safely) */
+.action-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Specialized button variants */
+.action-link {
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  color: var(--text);
+}
+
+.action-link:hover {
+  transform: translateY(-2px);
+  text-decoration: underline;
+}
+
+.action-pdf {
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  color: var(--text);
+}
+
+.action-pdf:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--accent) 18%, var(--card));
+}
+
+/* Project-report tag style */
+.project-report {
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+
+/* =========================================================
+  9) CARD SYSTEM + FADE-IN
+  Cards fade/slide in via IntersectionObserver (JS)
+========================================================= */
+
 .card {
   background: var(--card);
   border-radius: 18px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 
-    will-change: opacity, transform;
-    opacity: 0;
+  will-change: opacity, transform;
+  opacity: 0;
   transform: translateY(12px);
-  transition:
-  opacity 0.4s ease,
-  transform 0.4s ease;
+
+  transition: opacity 0.4s ease, transform 0.4s ease;
   transition-delay: var(--fade-delay, 0ms);
+
   margin-bottom: 2rem;
 }
 
@@ -321,26 +414,50 @@ bounded to a smaller box than the whole page which is actually not great */
 }
 
 
-.bullets{
-    margin: 0.5rem 0 0 1.2rem;
+/* =========================================================
+   10) GENERAL CONTENT HELPERS
+========================================================= */
+
+.bullets {
+  margin: 0.5rem 0 0 1.2rem;
 }
 
-.site-footer{
-    border-top: 1px solid #e5e7eb;
-    padding: 1.25rem 0;
-    color: var(--muted);
-    font-size: 0.85rem;
+
+/* =========================================================
+   11) FOOTER
+========================================================= */
+
+.site-footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 1.25rem 0;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
-/* Responsive */
-@media (max-width: 820px){
-    .hero{ grid-template-columns: 1fr; }
-    .nav{ display: none; }
-    .menu-button{ display: inline-block; }
-    .content-logo {
-    display: none;
-  }
-    }
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+/* =========================================================
+   12) RESPONSIVE NAV + HERO
+   Collapses top nav and hides content logos on small screens
+========================================================= */
+
+@media (max-width: 820px) {
+  .hero { grid-template-columns: 1fr; }
+  .nav { display: none; }
+  .menu-button { display: inline-block; }
+  .content-logo { display: none; }
+}
+
+
+/* =========================================================
+   13) RESUME PAGE
+========================================================= */
 
 .resume-actions {
   display: flex;
@@ -363,6 +480,11 @@ bounded to a smaller box than the whole page which is actually not great */
   border: none;
 }
 
+
+/* =========================================================
+  14) CONTACT PAGE
+========================================================= */
+
 .contact-card h1 {
   margin-top: 0;
 }
@@ -381,7 +503,6 @@ bounded to a smaller box than the whole page which is actually not great */
   padding-left: 0.75rem;
   border-left: 3px solid color-mix(in srgb, var(--accent) 35%, transparent);
 }
-
 
 .contact-grid h2 {
   font-size: 1.05rem;
@@ -407,64 +528,37 @@ bounded to a smaller box than the whole page which is actually not great */
   text-decoration: underline;
 }
 
-
-
-.project-report {
-  background: color-mix(in srgb, var(--accent) 12%, var(--card));
-  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
-}
-
-.action-btn:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-
-
-
 @media (max-width: 800px) {
   .contact-grid {
     grid-template-columns: 1fr;
   }
 }
 
-.hero-photo {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.hero-photo img {
-  width: 100%;
-  max-width: 320px;   /* controls headshot size */
-  border-radius: 16px;
-  display: block;
-}
+/* =========================================================
+  15) CONTENT CARDS (Projects/Research entries)
+========================================================= */
 
-/* -------------------------
-  CONTENT
-------------------------- */
 .content-card {
   background: linear-gradient(
     to bottom,
     color-mix(in srgb, var(--card) 97%, transparent),
     var(--card)
   );
-
   border-radius: 25px;
   padding: 1.25rem 1.5rem;
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
   max-width: 1100px;
   margin: 0;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover .content-card {
   transform: translateY(-1px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.08);
 }
+
 .card:focus-within .content-card {
   transform: translateY(-5px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.08);
@@ -482,13 +576,25 @@ bounded to a smaller box than the whole page which is actually not great */
   }
 }
 
-
-.content-block{
+/* Left accent border for content blocks */
+.content-block {
   border-left: 5px solid color-mix(in srgb, var(--accent) 85%, transparent);
-  /* border-right: 5px solid var(--accent);
-  border-bottom: 5px solid var(--accent); */
 }
 
+/* Deep link highlight (when navigating to #id) */
+.deep-link-highlight {
+  background: color-mix(in srgb, var(--accent) 8%, var(--card));
+  outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deep-link-highlight {
+    transition: none;
+  }
+}
+
+/* Header layout inside each content entry card */
 .content-header {
   display: flex;
   justify-content: space-between;
@@ -500,16 +606,56 @@ bounded to a smaller box than the whole page which is actually not great */
   flex: 1;
 }
 
+/* Type badge (Research / Project / Poster) */
+.content-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  margin-bottom: 0.35rem;
+
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.content-badge-project { }
+.content-badge-research { }
+.content-badge-poster { opacity: 0.9; }
+
+/* Meta row aligns badge and meta on one line */
+.content-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.content-meta-row .content-meta {
+  margin: 0;
+}
+
+/* Title sizing inside content cards */
 .content-header-text h2 {
   margin-top: 0;
   margin-bottom: 0.25rem;
   font-size: 1.8rem;
 }
 
+/* External title link styling */
 .content-title-link {
   color: inherit;
   text-decoration: none;
   position: relative;
+}
+
+.content-title-link:focus-visible {
+  text-decoration: underline;
 }
 
 .content-title-link::after {
@@ -531,13 +677,15 @@ bounded to a smaller box than the whole page which is actually not great */
   text-decoration: underline;
 }
 
+/* Meta text under title */
 .content-meta {
   font-size: 0.85rem;
   color: var(--muted);
-    margin-top: 0rem;
-  margin-bottom: 0rem; 
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
+/* Right-side logo block */
 .content-logo {
   padding-top: 0.25rem;
 }
@@ -553,9 +701,7 @@ bounded to a smaller box than the whole page which is actually not great */
 }
 
 @media (max-width: 900px) {
-  .content-logo {
-    display: none;
-  }
+  .content-logo { display: none; }
 }
 
 .content-logo a {
@@ -567,32 +713,34 @@ bounded to a smaller box than the whole page which is actually not great */
   transform: translateY(-5px);
 }
 
+/* Lead and summary blocks */
 .content-lead {
   font-size: 1.05rem;
-  margin-top: .5rem;
-  margin-bottom: 0rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 .content-summary {
-  /* max-width: 65ch; */
   line-height: 1.65;
-  margin-top: 0rem;
-  margin-bottom: 0rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-  .content-summary-wrapper {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.25s ease, opacity 0.3s ease;
-  }
+/* Summary collapse wrapper for "Show more" behavior */
+.content-summary-wrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease, opacity 0.3s ease;
+}
 
-  .content-body.expanded .content-summary-wrapper {
-    max-height: 500px; /* safely larger than any summary */
-    opacity: 1;
-  }
+.content-body.expanded .content-summary-wrapper {
+  max-height: 500px;
+  opacity: 1;
+}
 
-  .content-toggle {
+/* Show more button */
+.content-toggle {
   background: none;
   border: none;
   color: var(--accent);
@@ -600,19 +748,21 @@ bounded to a smaller box than the whole page which is actually not great */
   font-size: 0.85rem;
   cursor: pointer;
   padding: 0;
-  margin-bottom: 0rem;
+  margin-bottom: 0;
 }
 
 .content-toggle:hover {
   text-decoration: underline;
 }
 
+/* Divider inside content cards */
 .content-divider {
   height: 3px;
   background: color-mix(in srgb, var(--text) 12%, transparent);
-  margin: 1rem 0 1rem  0;
+  margin: 1rem 0 1rem 0;
 }
 
+/* Media box inside content cards */
 .content-media {
   background: color-mix(in srgb, var(--card) 92%, transparent);
   border-radius: 18px;
@@ -620,56 +770,131 @@ bounded to a smaller box than the whole page which is actually not great */
 
 .content-media h3 {
   margin-top: 0;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
+/* Action links area */
 .content-links {
-  margin-top: 0rem;
-  margin-bottom: .5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
   display: flex;
-
   flex-wrap: wrap;
-    gap: 0.75rem; 
+  gap: 0.75rem;
 }
 
-
-.action-link {
-  background: transparent;
-  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
-  color: var(--text);
-}
-
-.action-link:hover {
-  transform: translateY(-2px);
-  text-decoration: underline;
-}
-
-.action-pdf {
-  background: color-mix(in srgb, var(--accent) 12%, var(--card));
-  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
-  color: var(--text);
-}
-
-.action-pdf:hover {
-  transform: translateY(-2px);
-  background: color-mix(in srgb, var(--accent) 18%, var(--card));
-}
-
-.content-actions{
+.content-actions {
   margin-bottom: 1rem;
 }
 
 
+/* =========================================================
+   16) NEWS SECTION
+========================================================= */
 
-.card:hover .video iframe,
-.card:focus-within .video iframe {
-  filter: saturate(0.8) contrast(1) brightness(1);
-  transition: filter 0.25s ease;
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 260px;
+  overflow-y: auto;
 }
 
-/*
-VIDEO STYLING
-*/
+.news-list li {
+  margin-bottom: 0.6rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.news-date {
+  font-weight: 600;
+  color: var(--muted);
+  margin-right: 0.25rem;
+}
+
+.news-list strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.news-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.news-sort-toggle {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.news-sort-toggle:hover {
+  text-decoration: underline;
+}
+
+/* Scroll fade mask around the news list (enabled only while scrolling) */
+.news-scroll-mask {
+  position: relative;
+}
+
+.news-scroll-mask::before,
+.news-scroll-mask::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 24px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+}
+
+.news-scroll-mask::before {
+  top: 0;
+  background: linear-gradient(to bottom, var(--card), transparent);
+}
+
+.news-scroll-mask::after {
+  bottom: 0;
+  background: linear-gradient(to top, var(--card), transparent);
+}
+
+.news-scroll-mask.is-scrolling::before,
+.news-scroll-mask.is-scrolling::after {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   17) YOUTUBE (legacy grid)
+   Kept to avoid breaking any existing markup still using it
+========================================================= */
+
+.youtube-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.youtube-embed iframe {
+  width: 100%;
+  height: 160px;
+  border-radius: 14px;
+  border: none;
+  background: #000;
+}
+
+
+/* =========================================================
+   18) VIDEO STYLING (shared)
+   Used by your existing render video system
+========================================================= */
 
 .video-caption {
   opacity: 0;
@@ -685,50 +910,53 @@ VIDEO STYLING
 .video:hover .video-caption {
   transition-delay: 0.05s;
   opacity: 1;
-  transform: translateY(0)
+  transform: translateY(0);
 }
 
-/* Dark mode readability bump */
-html[data-theme="dark"] .video-caption {
-  color: color-mix(in srgb, var(--muted) 90%, white 10%);
-}
-
-.video-scroll{
+/* Horizontal scroll row of videos */
+.video-scroll {
   display: flex;
-  gap: 0.75rem;         /* smaller gap */
+  gap: 0.75rem;
   overflow-x: auto;
   align-items: flex-start;
   padding-bottom: 0.25rem;
 }
 
-.video-scroll .video{
-  margin: 0;           
-  flex: 0 0 300px;     
+.video-scroll .video {
+  margin: 0;
+  flex: 0 0 300px;
   max-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-.video-scroll .video iframe{
+.video-scroll .video iframe {
   width: 100%;
-  height: 150px;       
+  height: 150px;
   border: none;
   border-radius: 14px;
   background: #000;
   display: block;
-  filter: saturate(0.5) contrast(0.95) brightness(.95);
+  filter: saturate(0.5) contrast(0.95) brightness(0.95);
 }
 
+/* Hover effect for focused video inside the scroll row */
 .video-scroll:hover .video:hover iframe {
   filter: saturate(1) brightness(1);
   transform: translateY(-5px);
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
+/* Subtle iframe effect inside cards */
+.card:hover .video iframe,
+.card:focus-within .video iframe {
+  filter: saturate(0.8) contrast(1) brightness(1);
+  transition: filter 0.25s ease;
+}
 
-/* Scrollbar (WebKit browsers) */
+/* Scrollbar styling (WebKit) */
 .video-scroll::-webkit-scrollbar {
   height: 8px;
 }
@@ -739,32 +967,41 @@ html[data-theme="dark"] .video-caption {
 }
 
 
-/* -------------------------
-  Dark theme
-------------------------- */
+/* =========================================================
+   19) DARK THEME
+   Token swap + a few component bumps
+========================================================= */
 
 html[data-theme="dark"] {
-  --bg: #0f172a;        /* slate-900 */
-  --text: #e5e7eb;      /* gray-200 */
-  --muted: #9ca3af;     /* gray-400 */
-  --accent: #1e3a8a;    /* blue-800 */
-  --card: #050505;      /* gray-900 */
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #1e3a8a;
+  --card: #050505;
 }
-
 
 html[data-theme="dark"] .card {
   box-shadow: 0 6px 24px rgba(0,0,0,0.4);
 }
 
+/* Dark mode readability bump for captions */
+html[data-theme="dark"] .video-caption {
+  color: color-mix(in srgb, var(--muted) 90%, white 10%);
+}
 
+/* Dark mode scrollbar */
+html[data-theme="dark"] .video-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Keep a single dark-mode iframe rule (duplicate removed safely) */
 html[data-theme="dark"] .video iframe {
   background: #0b0b0b;
   border-radius: 14px;
   box-shadow: 0 10px 28px rgba(0,0,0,0.6);
 }
 
-
-
+/* Theme toggle button */
 .theme-toggle {
   background: transparent;
   border: 1px solid var(--muted);
@@ -780,29 +1017,11 @@ html[data-theme="dark"] .video iframe {
   background: rgba(0,0,0,0.05);
 }
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
 
+/* =========================================================
+   20) MODAL (PDF REPORT VIEWER)
+========================================================= */
 
-
-/* Dark mode scrollbar */
-html[data-theme="dark"] .video-scroll::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.25);
-}
-
-html[data-theme="dark"] .video iframe {
-  background: #0b0b0b;
-  border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.6);
-}
-
-
-
-/* Modal (shared for all projects) */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -814,7 +1033,7 @@ html[data-theme="dark"] .video iframe {
 
   opacity: 0;
   pointer-events: none;
-  transition: opacity .25s ease;
+  transition: opacity 0.25s ease;
 }
 
 .modal-overlay.active {
@@ -833,7 +1052,7 @@ html[data-theme="dark"] .video iframe {
 
   transform: translateY(30px);
   opacity: 0;
-  transition: transform .25s ease, opacity .25s ease;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .modal-overlay.active .modal {
@@ -841,14 +1060,13 @@ html[data-theme="dark"] .video iframe {
   opacity: 1;
 }
 
-
-/* Header */
+/* Modal header row */
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 15%, transparent);
 }
 
 /* Close button */
@@ -860,7 +1078,7 @@ html[data-theme="dark"] .video iframe {
   color: var(--text);
 }
 
-/* Content */
+/* Modal content area */
 .modal-content {
   flex: 1;
 }
@@ -871,3 +1089,13 @@ html[data-theme="dark"] .video iframe {
   border: none;
 }
 
+
+/* =========================================================
+  21) ACCESSIBILITY (GLOBAL)
+  Ensures keyboard focus is visible site-wide
+========================================================= */
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}

@@ -4,19 +4,19 @@ const HEADER_HTML = `
         <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
         <nav class="nav" aria-label="Primary navigation">
         <a href="/index.html">Main</a>
-        <a href="/pages/projects.html">Projects</a>
-        <a href="/pages/research.html">Research</a>
-        <a href="/pages/about.html">About</a>
-        <a href="/pages/contact.html">Contact</a>
+        <a href="../pages/projects.html">Projects</a>
+        <a href="../pages/research.html">Research</a>
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/contact.html">Contact</a>
         </nav>
     </div>
 
     <nav class="mobile-nav" aria-label="Mobile navigation">
         <a href="/index.html">Main</a>
-        <a href="/pages/projects.html">Projects</a>
-        <a href="/pages/research.html">Research</a>
-        <a href="/pages/about.html">About</a>
-        <a href="/pages/contact.html">Contact</a>
+        <a href="../pages/projects.html">Projects</a>
+        <a href="../pages/research.html">Research</a>
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/contact.html">Contact</a>
     </nav>
     `;
 
@@ -27,17 +27,6 @@ const HEADER_HTML = `
     </div>
 `;
 
-const headerEl = document.getElementById("site-header");
-    if (headerEl) {
-        headerEl.innerHTML = HEADER_HTML;
-        initHeader();
-}
-
-const footerEl = document.getElementById("site-footer");
-    if (footerEl) {
-        footerEl.innerHTML = FOOTER_HTML;
-        initFooter();
-}
 
 function initHeader() {
     const btn = document.querySelector(".menu-button");
@@ -79,6 +68,18 @@ function initFooter() {
 }
 
 
+const headerEl = document.getElementById("site-header");
+    if (headerEl) {
+        headerEl.innerHTML = HEADER_HTML;
+        initHeader();
+}
+
+const footerEl = document.getElementById("site-footer");
+    if (footerEl) {
+        footerEl.innerHTML = FOOTER_HTML;
+        initFooter();
+}
+
 let cardObserver;
 
 function initCardFadeIn() {
@@ -100,6 +101,7 @@ function initCardFadeIn() {
 }
 
 function observeCards() {
+    if (!cardObserver) return; 
     const sections = document.querySelectorAll("main");
 
     sections.forEach(section => {
@@ -112,9 +114,17 @@ function observeCards() {
     });
 }
 
-window.addEventListener("load", initCardFadeIn);
+document.addEventListener("DOMContentLoaded", initCardFadeIn);
+
 window.observeCards = observeCards;
 
-card.style.setProperty("--fade-delay", `${index * 50}ms`);
+
+import { renderLinks } from "./links.js";
+
+if (document.getElementById("youtube-links")) {
+    renderLinks("youtube-links");
+}
+
+
 
 

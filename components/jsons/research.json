@@ -1,6 +1,7 @@
 [
   {
     "id": "mpala",
+    "type" : "research",
     "title": "MPALA Lab",
     "meta": "Motion Planning, Active Learning, and Autonomy Lab · Spring 2025 - Present",
     "lead" : "At the Mpala lab m work has focused on blah blah and blah blah, whereI blah blah blah blah blah blah blah blahblah blah blah blah",
@@ -21,6 +22,7 @@
   },
   {
     "id": "surf-poster-2025",
+    "type" : "poster",
     "title": "Surf Poster – Multi-Agent Visualization",
     "meta": "Research Poster for SURF · Fall 2025",
     "lead": "I be leading",
@@ -49,6 +51,7 @@
   },
   {
   "id": "mirror",
+  "type" : "research",
   "title": "MIRROR Lab",
   "meta": "Mines Interactive Robotics Research Lab · Fall 2024 - Spring 2025",
   "lead": "I be leading",

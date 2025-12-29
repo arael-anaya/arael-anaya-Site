@@ -1,20 +1,11 @@
 REMAINING WORK CHECKLIST
 
-Core Content & Structure
-- Fill out Projects section (populate remaining JSON entries)
-- Complete other sections content (Projects coding is done, content remains)
-- Introduce type badges (Research / Project / Poster)
-- Add deep-link highlighting when navigating to a content item
-- Tighten copy specifically for grad admissions
-
-Global Verification
-- Verify all pages load without console errors
-- Ensure no duplicate IDs exist anywhere in DOM
-
-Navigation
-- Ensure mobile menu closes when a link is clicked
-- Verify navigation works with keyboard only
-- Verify navigation color contrast meets accessibility standards
+1. CORE TECHNICAL STRUCTURE
+- Favorites page that uses API calls to highlight favorites:
+    - Songs
+    - Movies
+    - Books
+    - YouTubers
 
 2. PROJECT SYSTEM (Core value of the site)
 
@@ -25,33 +16,35 @@ JSON Structure
     - featured (true/false)
 
 Rendering Logic
-- Add optional sort support (date, featured, custom)
+- Add optional sort support:
+    - date
+    - featured
+    - custom
 
 Videos
 - Verify videos lazy-load only when visible (optional improvement)
-- Test videos on mobile Safari and Chrome
+- Test videos on:
+    - Mobile Safari
+    - Mobile Chrome
 
 Reports
 - Verify PDF iframe resizes correctly on mobile
 - Verify PDF iframe does not trap scroll
 
-3. DESIGN & LAYOUT POLISH
+3. DESIGN & LAYOUT POLISH (Non-writing)
 
 Typography
 - Audit heading hierarchy (H1 → H2 → H3)
 - Ensure line length never exceeds ~75ch
-- Reduce visual noise in long paragraphs
-- Improve spacing between sections
+- Reduce visual noise in long paragraphs (layout only)
 
 Header
 - Improve visual separation between header and content
 - Test header on ultra-wide screens
 
 Footer
-- Ensure footer doesn’t feel empty
 - Improve theme toggle visibility in light mode
 - Add subtle divider above footer
-- Add small text links if needed (GitHub, LinkedIn)
 
 4. DARK MODE REFINEMENT
 - Audit all colors in dark mode
@@ -60,59 +53,48 @@ Footer
 - Ensure hover states exist in dark mode
 - Test dark mode on OLED screens
 
-5. ACCESSIBILITY (Important)
-- Ensure modals trap focus when open
-- Ensure focus returns to triggering button on modal close
-- Ensure sufficient contrast ratios (WCAG AA+)
-
-6. PERFORMANCE OPTIMIZATION
-- Lazy-load videos if possible
-- Compress images (headshot, logos)
+5. PERFORMANCE OPTIMIZATION
 - Minify CSS
 - Minify JS
 - Remove unused CSS rules
 - Remove unused JS functions
 - Check Lighthouse performance score
 
-7. CONTENT QUALITY
+6. WRITING & CONTENT COMPLETION
 
-About / Main Page
-- Rewrite summary to be more concise
-- Remove redundant phrasing
-- Add a clear “why it matters” sentence
-- Ensure tone is confident, not verbose
-
-Projects
+Projects Content
+- Fill out Projects section (populate remaining JSON entries)
 - Ensure each project has a clear problem statement
 - Ensure each project has a clear outcome
 - Ensure each project mentions tools/tech used
 - Ensure each project demonstrates growth
-- Remove fluff or vague language
 
-8. SCALABILITY & FUTURE-PROOFING
+About / Main Page
+- Rewrite summary to be more concise
+- Add a clear “why it matters” sentence
+
+Admissions-Focused Copy
+- Tighten copy specifically for grad admissions
+
+7. SCALABILITY & FUTURE-PROOFING
 - Add deep-link support (?project=megn-301)
 - Add deep-link support for auto-opening reports
 - Add project tags and filtering
 - Add project sorting options
 - Add related-projects logic
 - Add per-project pages auto-generated from JSON
-- Add search or filtering UI (optional)
-- Consider static site generator migration later (optional)
 
-9. DEPLOYMENT & RELIABILITY
+8. DEPLOYMENT & RELIABILITY
 - Verify GitHub Pages build works
 - Verify Netlify build compatibility
-- Add custom domain later
-- Add HTTPS redirect
 - Test site on:
     - Firefox
     - Safari
     - Mobile Chrome
     - Mobile Safari
 
-10. FINAL PRE-LAUNCH CHECKLIST
+9. FINAL PRE-LAUNCH CHECKLIST
 - No placeholder text remains
-- No commented-out dead code
 - All links valid
 - Metadata (title, description) added
 - Site feels cohesive and intentional
