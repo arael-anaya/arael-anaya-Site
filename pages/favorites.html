@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arael Anaya</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet"
+    >
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+</head>
+<body>
+    <body data-page="favorites" data-requires-auth="favorites">
+    <div id="site-header"></div>
+
+<main class="container">
+    <section class="favorites-intro">
+        <p>
+            This page is a snapshot of the media that has shaped how I think, design,
+            and learn. I tend to gravitate toward work that blends structure with
+            creativity—systems that are elegant, expressive, and a little obsessive.
+        </p>
+    </section>
+
+    <section class="favorites-tech-note">
+        <p>
+            This page is built as a small data pipeline: personal preferences are
+            defined in JSON, enriched through public APIs, cached locally with
+            category-specific TTLs, and rendered through a unified component system.
+            The design prioritizes resilience—API failures degrade gracefully without
+            breaking the page.
+        </p>
+    </section>
+
+
+    <div class="favorites-controls">
+        <div class="favorites-filters">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="books">Books</button>
+            <button data-filter="songs">Music</button>
+            <button data-filter="movies">Movies</button>
+        </div>
+
+        <select id="favorites-sort">
+            <option value="featured">Featured first</option>
+            <option value="rating-desc">Rating (high → low)</option>
+            <option value="alpha">Alphabetical (A–Z)</option>
+            <option value="alpha-rev">Alphabetical (Z–A)</option>
+            <option value="date-released">Date released</option>
+            <option value="date-added">Date added</option>
+        </select>
+    </div>
+
+
+    <div id="favorites-container"></div>
+</main>
+
+<div class="modal-overlay" id="project-modal">
+    <div class="modal">
+        <div class="modal-header">
+        <h3 id="modal-title"></h3>
+        <button class="modal-close" aria-label="Close">&times;</button>
+        </div>
+
+        <div class="modal-content">
+        <iframe id="modal-frame" title="Project Report"></iframe>
+        </div>
+    </div>
+</div>
+
+<div id="site-footer"></div>
+
+
+<script type="module" src="../js/main.js"></script>
+<script type="module" src="../js/favorites/favorites.js"></script>
+
+
+</body>
+</html>

@@ -1,13 +1,29 @@
 let newsItems = [];
 let newestFirst = true;
 
-const container = document.getElementById("news");
+const container = document.getElementById("news-list");
 const toggleBtn = document.querySelector(".news-sort-toggle");
+const scrollMask = document.querySelector(".news-scroll-mask");
+
+let scrollTimeout;
 
 function parseDate(dateStr) {
-    // Expects formats like "Dec 2025"
     const [month, year] = dateStr.split(" ");
     return new Date(`${month} 1, ${year}`);
+}
+
+function attachScrollMask() {
+    const newsList = scrollMask?.querySelector(".news-list");
+    if (!newsList || !scrollMask) return;
+
+    newsList.addEventListener("scroll", () => {
+        scrollMask.classList.add("is-scrolling");
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+        scrollMask.classList.remove("is-scrolling");
+        }, 150);
+    });
 }
 
 function renderNews() {
@@ -27,6 +43,8 @@ function renderNews() {
         `).join("")}
         </ul>
     `;
+
+    attachScrollMask(); // 👈 THIS is the missing piece
 }
 
 fetch("/components/jsons/news.json")
@@ -46,20 +64,3 @@ fetch("/components/jsons/news.json")
         renderNews();
     });
 }
-
-const scrollMask = document.querySelector(".news-scroll-mask");
-const newsList = scrollMask?.querySelector(".news-list");
-
-let scrollTimeout;
-
-if (newsList && scrollMask) {
-    newsList.addEventListener("scroll", () => {
-        scrollMask.classList.add("is-scrolling");
-
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-        scrollMask.classList.remove("is-scrolling");
-        }, 150);
-    });
-    }
-

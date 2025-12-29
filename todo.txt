@@ -7,6 +7,22 @@ REMAINING WORK CHECKLIST
     - Books
     - YouTubers
 
+    🎨 Add subtle category-specific styling (badges, icons)
+
+⚡ Add caching + TTL (performance + reliability)
+
+🧭 Add sorting/grouping (design polish)
+
+🧠 Add a short write-up explaining this system (admissions gold)
+
+Add featured badges visually
+
+🔎 Add filtering by category
+
+📱 Tighten mobile spacing
+
+🧠 Write a short technical note explaining this system (huge admissions value)
+
 2. PROJECT SYSTEM (Core value of the site)
 
 JSON Structure

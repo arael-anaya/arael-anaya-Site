@@ -1,0 +1,319 @@
+{
+    "books": [
+        {
+        "query": "Godel Escher Bach",
+        "featured": true,
+        "rating": 5,
+        "dateAdded": "2024-09-01"
+        },
+        {
+        "query": "The Structure of Scientific Revolutions",
+        "rating": 4,
+        "dateAdded": "2024-07-12"
+        },
+        {
+        "query": "Thinking in Systems",
+        "rating": 5,
+        "dateAdded": "2024-06-03"
+        },
+        {
+        "query": "The Design of Everyday Things",
+        "rating": 4,
+        "dateAdded": "2024-05-21"
+        },
+        {
+        "query": "Surely You're Joking Mr. Feynman",
+        "rating": 4,
+        "dateAdded": "2024-04-10"
+        },
+        {
+        "query": "A Brief History of Time",
+        "rating": 3,
+        "dateAdded": "2024-03-01"
+        },
+        {
+        "query": "The Pragmatic Programmer",
+        "rating": 5,
+        "dateAdded": "2024-02-14"
+        },
+        {
+        "query": "Clean Code",
+        "rating": 4,
+        "dateAdded": "2024-01-30"
+        },
+        {
+        "query": "Man's Search for Meaning",
+        "rating": 5,
+        "dateAdded": "2023-12-18"
+        },
+        {
+        "query": "The Mythical Man-Month",
+        "rating": 3,
+        "dateAdded": "2023-11-02"
+        },
+        {
+        "query": "Structure and Interpretation of Computer Programs",
+        "featured": true,
+        "rating": 5,
+        "dateAdded": "2023-10-01"
+        },
+        {
+        "query": "Zen and the Art of Motorcycle Maintenance",
+        "rating": 4,
+        "dateAdded": "2023-09-15"
+        }
+    ],
+
+    "songs": [
+        {
+        "query": "Motion Picture Soundtrack Radiohead",
+        "featured": true,
+        "rating": 5,
+        "dateAdded": "2024-08-20",
+        "fallback": {
+            "title": "Motion Picture Soundtrack",
+            "subtitle": "Radiohead",
+            "meta": "2000"
+        }
+        },
+        {
+        "query": "Reckoner Radiohead",
+        "rating": 5,
+        "dateAdded": "2024-08-15",
+        "fallback": {
+            "title": "Reckoner",
+            "subtitle": "Radiohead",
+            "meta": "2007"
+        }
+        },
+        {
+        "query": "How to Disappear Completely Radiohead",
+        "rating": 5,
+        "dateAdded": "2024-07-22",
+        "fallback": {
+            "title": "How to Disappear Completely",
+            "subtitle": "Radiohead",
+            "meta": "2000"
+        }
+        },
+        {
+        "query": "Nujabes Feather",
+        "rating": 4,
+        "dateAdded": "2024-07-01",
+        "fallback": {
+            "title": "Feather",
+            "subtitle": "Nujabes",
+            "meta": "2005"
+        }
+        },
+        {
+        "query": "Time Pink Floyd",
+        "rating": 4,
+        "dateAdded": "2024-06-10",
+        "fallback": {
+            "title": "Time",
+            "subtitle": "Pink Floyd",
+            "meta": "1973"
+        }
+        },
+        {
+        "query": "Svefn-g-englar Sigur Ros",
+        "rating": 5,
+        "dateAdded": "2024-05-18",
+        "fallback": {
+            "title": "Svefn-g-englar",
+            "subtitle": "Sigur Rós",
+            "meta": "1999"
+        }
+        },
+        {
+        "query": "Teardrop Massive Attack",
+        "rating": 4,
+        "dateAdded": "2024-04-25",
+        "fallback": {
+            "title": "Teardrop",
+            "subtitle": "Massive Attack",
+            "meta": "1998"
+        }
+        },
+        {
+        "query": "Nightcall Kavinsky",
+        "rating": 3,
+        "dateAdded": "2024-04-02",
+        "fallback": {
+            "title": "Nightcall",
+            "subtitle": "Kavinsky",
+            "meta": "2010"
+        }
+        },
+        {
+        "query": "Everything in Its Right Place Radiohead",
+        "rating": 4,
+        "dateAdded": "2024-03-10",
+        "fallback": {
+            "title": "Everything in Its Right Place",
+            "subtitle": "Radiohead",
+            "meta": "2000"
+        }
+        },
+        {
+        "query": "Breathe Telepopmusik",
+        "rating": 3,
+        "dateAdded": "2024-02-01",
+        "fallback": {
+            "title": "Breathe",
+            "subtitle": "Télépopmusik",
+            "meta": "2001"
+        }
+        },
+        {
+        "query": "Clair de Lune Debussy",
+        "rating": 5,
+        "dateAdded": "2024-01-05",
+        "fallback": {
+            "title": "Clair de Lune",
+            "subtitle": "Claude Debussy",
+            "meta": "1905"
+        }
+        },
+        {
+        "query": "Avril 14th Aphex Twin",
+        "rating": 4,
+        "dateAdded": "2023-12-01",
+        "fallback": {
+            "title": "Avril 14th",
+            "subtitle": "Aphex Twin",
+            "meta": "2001"
+        }
+        }
+    ],
+
+    "movies": [
+        {
+        "query": "Her",
+        "featured": true,
+        "rating": 5,
+        "dateAdded": "2024-08-01"
+        },
+        {
+        "query": "Blade Runner 2049",
+        "featured": true,
+        "rating": 5,
+        "dateAdded": "2024-07-15"
+        },
+        {
+        "query": "Arrival",
+        "rating": 5,
+        "dateAdded": "2024-06-20"
+        },
+        {
+        "query": "Ex Machina",
+        "rating": 4,
+        "dateAdded": "2024-05-11"
+        },
+        {
+        "query": "Eternal Sunshine of the Spotless Mind",
+        "rating": 5,
+        "dateAdded": "2024-04-01"
+        },
+        {
+        "query": "2001 A Space Odyssey",
+        "rating": 4,
+        "dateAdded": "2024-03-12"
+        },
+        {
+        "query": "The Social Network",
+        "rating": 4,
+        "dateAdded": "2024-02-20"
+        },
+        {
+        "query": "Interstellar",
+        "rating": 5,
+        "dateAdded": "2024-01-25"
+        },
+        {
+        "query": "Moon",
+        "rating": 4,
+        "dateAdded": "2023-12-10"
+        },
+        {
+        "query": "Annihilation",
+        "rating": 4,
+        "dateAdded": "2023-11-05"
+        },
+        {
+        "query": "The Matrix",
+        "rating": 5,
+        "dateAdded": "2023-10-01"
+        },
+        {
+        "query": "Primer",
+        "rating": 3,
+        "dateAdded": "2023-09-10"
+        }
+    ],
+
+    "youtubers": [
+        {
+        "query": "Kurzgesagt – In a Nutshell",
+        "rating": 5,
+        "dateAdded": "2024-07-01"
+        },
+        {
+        "query": "Veritasium",
+        "rating": 5,
+        "dateAdded": "2024-06-12"
+        },
+        {
+        "query": "3Blue1Brown",
+        "featured": true,
+        "rating": 5,
+        "dateAdded": "2024-05-20"
+        },
+        {
+        "query": "SmarterEveryDay",
+        "rating": 4,
+        "dateAdded": "2024-04-18"
+        },
+        {
+        "query": "Tom Scott",
+        "rating": 4,
+        "dateAdded": "2024-03-30"
+        },
+        {
+        "query": "Technology Connections",
+        "rating": 4,
+        "dateAdded": "2024-02-14"
+        },
+        {
+        "query": "Real Engineering",
+        "rating": 5,
+        "dateAdded": "2024-01-10"
+        },
+        {
+        "query": "Two Minute Papers",
+        "rating": 4,
+        "dateAdded": "2023-12-05"
+        },
+        {
+        "query": "Sebastian Lague",
+        "rating": 5,
+        "dateAdded": "2023-11-01"
+        },
+        {
+        "query": "ColdFusion",
+        "rating": 3,
+        "dateAdded": "2023-10-12"
+        },
+        {
+        "query": "CGP Grey",
+        "rating": 4,
+        "dateAdded": "2023-09-01"
+        },
+        {
+        "query": "Engineerguy",
+        "rating": 5,
+        "dateAdded": "2023-08-15"
+        }
+    ]
+}

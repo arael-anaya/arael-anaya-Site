@@ -3,100 +3,77 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Arael Anaya</title>
-  <link rel="stylesheet" href="../css/styles.css" />
-
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <title>Arael Anaya</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+  >
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css" />
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
 </head>
 
 <body>
-    <div id="site-header"></div>
+  <body data-page="contact">
+  <div id="site-header"></div>
 
-<main class="container">
-  <div id="contact-header"></div>
-  <div class="content-divider"></div>
-  <section class="card content-block">
-  <section class="content-card contact-card">
-    
-    <p class="contact-intro">
-      The best way to reach me is via email. I am happy to connect regarding
-      research, collaboration, or opportunities.
-    </p>
+  <main class="container">
+    <div id="contact-header"></div>
+    <div class="content-divider"></div>
+    <section class="card content-block">
+      <section class="content-card contact-card">
+        <header class="contact-card-header">
+          <h2>Get in touch</h2>
+        </header>
 
-    <div class="contact-grid">
-      <div>
-        <h2>Email</h2>
-        <p>
-        <a href="mailto:Arael.A.Anaya@gmail.com"
-          onclick="navigator.clipboard.writeText('Arael.A.Anaya@gmail.com')">
-          Arael.A.Anaya@gmail.com
-        </a>
-
+        <p class="contact-intro">
+          The best way to reach me is via email. I am happy to connect regarding
+          research, collaboration, or opportunities.
         </p>
-      </div>
 
-      <div>
-        <h2>Location</h2>
-        <p>
-          Golden, Colorado<br />
-          United States
-        </p>
-      </div>
+        <div class="contact-grid">
+          <div>
+            <h2>Email</h2>
 
-      <div>
-        <h2>Online</h2>
-        <ul class="contact-links">
-
-            <li>
-            <a class="action-btn action-link"
-              href="https://www.linkedin.com/in/arael-anaya"
-              target="_blank">
-              LinkedIn
+            <a
+              class="contact-email"
+              href="mailto:Arael.A.Anaya@gmail.com"
+              onclick="navigator.clipboard.writeText('Arael.A.Anaya@gmail.com')"
+            >
+              Arael.A.Anaya@gmail.com
+              <span>click to copy</span>
             </a>
-          </li>
+            <p class="contact-note">I typically respond within 1–2 days.</p>
+          </div>
 
-          <li>
-            <a class="action-btn action-link"
-              href="https://github.com/arael-anaya"
-              target="_blank">
-              GitHub
-            </a>
-          </li>
+        <div>
+          <h2>Location</h2>
+          <p>
+            Golden, Colorado<br />
+            United States
+          </p>
+        </div>
 
-          <li>
-            <a class="action-btn action-link"
-              href="https://scholar.google.com/"
-              target="_blank">
-              Google Scholar
-            </a>
-          </li>
-
-        
-        </ul>
+        <div>
+          <h2>Online</h2>
+          <div id="contact-links" class="contact-links"></div>
+        </div>
       </div>
-    </div>
-  </section>
-  </section>
-</main>
+      </section>
+    </section>
+  </main>
 
-<div id="site-footer"></div>
+  <div id="site-footer"></div>
 
-<script type="module" src="../js/main.js"></script>
-
-
-
-<script type="module">
-    import { renderSectionHeader } from "../js/sectionHeader.js";
-
-    document.addEventListener("DOMContentLoaded", () => {
-        renderSectionHeader("contact", "contact-header");
-    });
-</script>
-
+  <script type="module" src="../js/main.js"></script>
 
 </body>
 </html>
