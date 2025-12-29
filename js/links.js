@@ -2,7 +2,7 @@ export function renderLinks(containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    fetch("components/links.json")
+    fetch("/components/jsons/links.json")
         .then(r => r.json())
         .then(links => {
         container.innerHTML = links.map(l => `

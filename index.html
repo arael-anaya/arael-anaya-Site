@@ -36,9 +36,13 @@
         </p>
 
         <div class="home-actions">
-            <a class="chip" href="projects.html">View Projects</a>
-            <a class="chip" href="research.html">Research</a>
-            <a class="chip" href="resume.html">Resume</a>
+            <button class="action-btn action-pdf"
+                data-report= "/assets/Resume - Arael Anaya .pdf"
+                data-title= "Resume">
+                View Resume
+            </button>
+            <a class="chip" href="/pages/projects.html">View Projects</a>
+            <a class="chip" href="/pages/research.html">View Research</a>
         </div>
     </section>
 
@@ -76,14 +80,68 @@
 
     <section class="card">
         <section
-            id="project"
+            id="featured-project"
             data-project="megn-301"
         ></section>
         <section
-            id = "research"
+            id = "featured-research"
             data-research="mpala"
         ></section>
     </section>
+
+    <div class="content-divider"></div>
+
+    <h2 class="section-label">News</h2>
+
+        <section class="card content-block">
+            <section class="content-card">
+                <div class="news-header">
+                    <button class="news-sort-toggle" aria-expanded="false">
+                    Newest first ↓
+                    </button>
+                </div>
+                <div class="news-scroll-mask">
+                    <div id="news"></div>
+                </div>       
+            </section>
+
+        </section>
+    
+    <div class="content-divider"></div>
+    
+
+    <h2 class="section-label">Experimental Videos</h2>
+
+<section class="card content-block">
+  <section class="content-card">
+    <div class="video-scroll">
+      <figure class="video">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_1"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+        <figcaption class="video-caption">
+          Multi-agent consensus with Crazyflie drones
+        </figcaption>
+      </figure>
+
+      <figure class="video">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_2"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+        <figcaption class="video-caption">
+          Resilient control under communication faults
+        </figcaption>
+      </figure>
+    </div>
+
+    <div id="youtube-links" class="content-links"></div>
+  </section>
+</section>
+
 
     <div class="content-divider"></div>
 
@@ -98,7 +156,7 @@
             </p>
 
             <a class="content-title-link" href="about.html">
-            More about me →
+            More about me 
             </a>
         </section>
     </section>
@@ -119,18 +177,18 @@
     </div>
 </div>
 
-
-
 <div id="site-footer"></div>
 
 
+<script type="module" src="js/main.js"></script>
 
-<script type="module" src="js/projects.js"></script>
 <script src="js/modal.js"></script>
-
+<script type="module" src="js/projects.js"></script>
 <script type="module" src="js/research.js"></script>
+<script src="js/news.js"></script>
 
-<script src="js/main.js"></script>
+
+
 
 </body>
 </html>

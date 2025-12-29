@@ -2,6 +2,7 @@
 export function renderEntries(entries, container) {
     entries.forEach(e => {
         const needsToggle = e.summary && e.summary.length > 100;
+
         const primaryLink =
             Array.isArray(e.links) && e.links.length > 0 ? e.links[0] : null;
         const secondaryLinks =
@@ -11,11 +12,11 @@ export function renderEntries(entries, container) {
             e.report ||
             (Array.isArray(e.videos) && e.videos.length > 0) ||
             (Array.isArray(secondaryLinks) && secondaryLinks.length > 0) ||
-            ( (Array.isArray(e.pdf) && e.pdf.length > 0) );
-        
-        
+            ( (Array.isArray(e.pdf) && e.pdf.length > 0) );    
 
         const section = document.createElement("section");
+        section.id = e.id;
+
         section.className = "card content-block";
 
         section.innerHTML = `
@@ -23,6 +24,7 @@ export function renderEntries(entries, container) {
             <section class = "content-card">
                 <header class="content-header">
                     <div class="content-header-text">
+                        
                         <h2>
                             ${primaryLink ? `
                                 <a
@@ -35,8 +37,21 @@ export function renderEntries(entries, container) {
                                 </a>
                             ` : e.title}
                         </h2>
+                        
+                        ${(e.type || e.meta) ? `
+                            <div class="content-meta-row">
+                                ${e.type ? `
+                                <span class="content-badge content-badge-${e.type}">
+                                    ${e.type}
+                                </span>
+                                ` : ""}
 
-                        ${e.meta ? `<p class="content-meta">${e.meta} </p>` : ""}
+                                ${e.meta ? `
+                                <p class="content-meta">${e.meta}</p>
+                                ` : ""}
+                            </div>
+                            ` : ""}
+                            
                         ${e.lead ? `<p class = "content-lead">${e.lead}</p>` : ""}
                     </div>
 
@@ -124,8 +139,11 @@ export function renderEntries(entries, container) {
                             <iframe
                                 src="https://www.youtube.com/embed/${videoId}"
                                 loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                title="YouTube video"
                                 allowfullscreen>
                             </iframe>
+
                             ${caption ? `<figcaption class="video-caption">${caption}</figcaption>` : ""}
                             </figure>
                         `;
@@ -142,6 +160,8 @@ export function renderEntries(entries, container) {
 
     });
 }
+
+//Show More Button Logic
 document.addEventListener("click", e => {
     const btn = e.target.closest(".content-toggle");
     if (!btn) return;
@@ -152,3 +172,22 @@ document.addEventListener("click", e => {
     btn.textContent = expanded ? "Show less ↑" : "Show more ↓";
     btn.setAttribute("aria-expanded", expanded.toString());
 });
+
+
+//Deep link loading
+window.addEventListener("load", () => {
+    const hash = window.location.hash.replace("#", "");
+    if (!hash) return;
+
+    const target = document.getElementById(hash);
+    if (!target) return;
+
+    target.scrollIntoView({ behavior: "smooth", block: "center" });
+    target.classList.add("deep-link-highlight");
+
+    setTimeout(() => {
+        target.classList.remove("deep-link-highlight");
+    }, 1800);
+
+});
+
