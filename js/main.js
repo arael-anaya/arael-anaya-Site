@@ -70,7 +70,7 @@ function initFooter() {
 
     if (savedTheme === "dark") {
         root.setAttribute("data-theme", "dark");
-        toggle.textContent = "LIGHT";
+        toggle.textContent = "Light Mode";
     } else {
         root.removeAttribute("data-theme");
         toggle.textContent = "Dark Mode";
