@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../assets/favicon/site..webmanifest">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
 </head>
 <body data-page="research">
@@ -31,15 +31,33 @@
     <div id="site-header"></div>
 
 <main class="container">
-    <div id="research-header"></div>
+
+    <header class="section-header" id="research-hero">
+        <h1 class="section-header-title">
+            Robotics Research
+        </h1>
+        <div class="section-header-row">
+        <p class="section-header-lead">
+            My research focuses on swarm robotics, resilient consensus algorithms such as W-MSR,
+        state estimation, and human-robot interaction, with an emphasis on validating theory
+        through real-world ROS 2 experimentation.
+        </p>
+        </div>
+    </header>
+
     <div class="content-divider"></div>
-    <div id="research" data-project=""></div>
+    <section
+        id="research"
+        data-project=""
+        aria-label="Robotics research projects and publications"
+    ></section>
+
 </main>
 
 <div class="modal-overlay" id="project-modal">
     <div class="modal">
         <div class="modal-header">
-        <h3 id="modal-title"></h3>
+        <h3 id="modal-title" aria-live="polite"></h3>
         <button class="modal-close" aria-label="Close">&times;</button>
         </div>
 
@@ -48,6 +66,11 @@
         </div>
     </div>
 </div>
+
+        <p class="related">
+        Related implementations and supporting systems are documented in my
+        <a href="./projects.html">engineering and robotics projects</a>.
+        </p>
 
 <div id="site-footer"></div>
 

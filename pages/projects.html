@@ -6,8 +6,9 @@
     <title>Projects | Arael Anaya</title>
         <meta
         name="description"
-        content="Engineering and robotics projects spanning controls, autonomy, CAD/FEA, embedded systems, and experimental validation across hardware and simulation."
+        content="Engineering and robotics projects spanning control systems, autonomy, CAD and FEA, embedded software, and experimental validation across hardware and simulation."
         >
+
         <meta name="robots" content="index, follow">
 
     <!-- Fonts -->
@@ -23,7 +24,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../assets/favicon/site..webmanifest">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
 </head>
 
@@ -31,17 +32,39 @@
 
     <div id="site-header"></div>
 
+
+
+
     <main class="container">
-        <div id="projects-header"></div>
+
+            <header class="section-header" id="projects-hero">
+                <h1 class="section-header-title">
+                    Engineering and Robotics Projects
+                </h1>
+
+                <div class="section-header-row">
+                <p class="section-header-lead">
+                    These projects span robotics, control systems, embedded software, CAD and FEA,
+                    and experimental validation, bridging theoretical design with hands-on engineering
+                    implementation.
+                </p>
+                </div>
+            </header>
+        
         <div class="content-divider"></div>
-        <section id="projects" data-project=""></section>
+        <section
+            id="projects"
+            data-project=""
+            aria-label="Engineering and robotics projects"
+        ></section>
+
 
     </main>
 
     <div class="modal-overlay" id="project-modal">
         <div class="modal">
             <div class="modal-header">
-            <h3 id="modal-title"></h3>
+            <h3 id="modal-title" aria-live="polite"></h3>
             <button class="modal-close" aria-label="Close">&times;</button>
             </div>
 
@@ -50,6 +73,12 @@
             </div>
         </div>
     </div>
+
+    <p class = "related">
+    Several of these projects directly support my
+    <a href="./research.html">research in multi-agent robotics and control systems</a>.
+    </p>
+
 
     <div id="site-footer"></div>
 

@@ -1,12 +1,7 @@
-const BASE = window.location.hostname.includes("github.io")
-    ? `/${window.location.pathname.split("/")[1]}`
-    : "";
-window.__BASE__ = BASE;
 
 
 const HEADER_HTML = `
     <div class="container header-row">
-        <a class="brand" href="${BASE}/index.html">Arael A. Anaya</a>
         <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
         <nav class="nav" aria-label="Primary navigation">
 <<<<<<< Updated upstream
