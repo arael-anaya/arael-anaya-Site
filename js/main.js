@@ -9,20 +9,20 @@ const HEADER_HTML = `
         <a class="brand" href="${BASE}/index.html">Arael A. Anaya</a>
         <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
         <nav class="nav" aria-label="Primary navigation">
-        <a href="${BASE}/index.html">Main</a>
-        <a href="${BASE}/pages/projects.html">Projects</a>
-        <a href="${BASE}/pages/research.html">Research</a>
-        <a href="${BASE}/pages/about.html">About</a>
-        <a href="${BASE}/pages/contact.html">Contact</a>
+        <a href="${BASE}/">Main</a>
+        <a href="${BASE}/pages/projects/">Projects</a>
+        <a href="${BASE}/pages/research/">Research</a>
+        <a href="${BASE}/pages/about/">About</a>
+        <a href="${BASE}/pages/contact/">Contact</a>
         </nav>
     </div>
 
     <nav class="mobile-nav" aria-label="Mobile navigation">
-        <a href="${BASE}/index.html">Main</a>
-        <a href="${BASE}/pages/projects.html">Projects</a>
-        <a href="${BASE}/pages/research.html">Research</a>
-        <a href="${BASE}/pages/about.html">About</a>
-        <a href="${BASE}/pages/contact.html">Contact</a>
+        <a href="${BASE}/">Main</a>
+        <a href="${BASE}/pages/projects/">Projects</a>
+        <a href="${BASE}/pages/research/">Research</a>
+        <a href="${BASE}/pages/about/">About</a>
+        <a href="${BASE}/pages/contact/">Contact</a>
     </nav>
 `;
 
@@ -182,7 +182,7 @@ const KONAMI = [
 
     function unlockFavorites() {
     sessionStorage.setItem("favoritesUnlocked", "true");
-    window.location.href = `${BASE}/pages/favorites.html`;
+    window.location.href = `${BASE}/pages/favorites/`;
 }
 
 
@@ -190,7 +190,7 @@ const KONAMI = [
 document.addEventListener("DOMContentLoaded", () => {
     if (document.body.dataset.requiresAuth === "favorites") {
         if (!sessionStorage.getItem("favoritesUnlocked")) {
-        window.location.replace("./index.html");
+        window.location.replace("./");
         }
     }
 });
@@ -226,7 +226,7 @@ switch (page) {
         case "favorites":
     
         if (!sessionStorage.getItem("favoritesUnlocked")) {
-            window.location.replace("${BASE}/index.html");
+            window.location.replace("${BASE}/");
         }
     break;
 }
