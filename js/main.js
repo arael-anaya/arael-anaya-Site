@@ -137,13 +137,16 @@ window.observeCards = observeCards;
 
 import { renderLinks } from "./links.js";
 
-if (document.getElementById("youtube-links")) {
-    renderLinks("youtube-links", "YouTube Channel");
-}
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.getElementById("youtube-links")) {
+        renderLinks("youtube-links", "YouTube Channel");
+    }
 
-if (document.getElementById("contact-links")) {
-    renderLinks("contact-links");
-}
+    if (document.getElementById("contact-links")) {
+        renderLinks("contact-links");
+    }
+});
+
 
 
 
@@ -180,8 +183,7 @@ const KONAMI = [
 document.addEventListener("DOMContentLoaded", () => {
     if (document.body.dataset.requiresAuth === "favorites") {
         if (!sessionStorage.getItem("favoritesUnlocked")) {
-        window.location.replace(`${BASE}/index.html`);
-
+        window.location.replace("./index.html");
         }
     }
 });
