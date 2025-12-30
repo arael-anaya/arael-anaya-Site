@@ -73,8 +73,8 @@ h3 {
 
 
 /* =========================================================
-   4) HEADER + NAVIGATION
-   Desktop nav + mobile nav scaffolding
+    4) HEADER + NAVIGATION
+    Desktop nav + mobile nav scaffolding
 ========================================================= */
 
 #site-header {
@@ -144,8 +144,8 @@ h3 {
 
 
 /* =========================================================
-   5) SECTION HEADERS
-   Used on pages like Research/Projects
+    5) SECTION HEADERS
+    Used on pages like Research/Projects
 ========================================================= */
 
 .section-header {
@@ -247,6 +247,14 @@ h3 {
 .section-subnav a:hover::after {
   width: 100%;
 }
+
+.related {
+    margin-top: 2.5rem;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    text-align: center;
+}
+
 
 
 /* =========================================================

@@ -23,30 +23,45 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../assets/favicon/site..webmanifest">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
 </head>
 <body data-page="about">
     <div id="site-header"></div>
 
 <main class="container">
-    <div id="about-header"></div>
+
+    <header class="section-header" id="research-hero">
+        <h1 class="section-header-title">
+            About Me
+        </h1>
+        <div class="section-header-row">
+        <p class="section-header-lead">
+        I am a robotics graduate student at the Colorado School of Mines, focusing on
+        multi-agent systems, aerial robotics, and real-world autonomy through experimental research.
+        </p>
+        </div>
+    </header>
+
+
     <div class="content-divider"></div>
-    <nav class="section-subnav">
+    <nav class="section-subnav" aria-label="About page sections">
     <a href="#about-hero">Overview</a>
     <a href="#resume">Resume</a>
     <a href="#background">Background</a>
     </nav>
+
     <section class="card" id = "about-hero">
         <section class="hero">
             <div class="hero-text">
 
                 <p>
-                    I am a Mechanical Engineering student at the Colorado School of Mines with a minor in Robotics & Intelligent Systems, 
-                    pursuing a Masters in Robotics. My current work focuses on distributed robotics and resilient multi-agent systems. 
-                    At the MPALA Lab, I focus on developing aerial swarm platforms with Crazyflie drones, OptiTrack motion capture, 
-                    and ROS 2 to test consensus and resilient control algorithms under real-world conditions.
+                    I am a Mechanical Engineering student at the Colorado School of Mines with a minor in Robotics and Intelligent Systems,
+                    pursuing a Master’s degree in Robotics Engineering. My current work focuses on distributed robotics and resilient
+                    multi-agent systems. At the MPALA Lab, I develop aerial swarm platforms using Crazyflie drones, OptiTrack motion
+                    capture, and ROS 2 to test consensus and resilient control algorithms under real-world conditions.
                 </p>
+
 
                 <div class="links-row" id="about-links"></div>
 
@@ -58,7 +73,11 @@
             </div>
 
             <div class="hero-photo">
-                <img src="../assets/images/headshots/headshot.jpg" alt="headshotOne" />
+                <img
+                    src="../assets/images/headshots/headshot.jpg"
+                    alt="Arael Anaya, robotics graduate student at the Colorado School of Mines"
+                />
+
             </div>
         </section>
     </section>
@@ -90,15 +109,21 @@
         <section class="card content-block" id = "background">
             <section class="content-card">
                 <h2>Background & Interests</h2>
-                <p class="content-summary">
-                My academic interests center on bridging theoretical guarantees in control
-                with experimentally validated robotic systems. I am particularly interested
-                in resilient multi-agent coordination, human-in-the-loop autonomy, and
-                real-world deployment constraints.
-                </p>
+                    <p class="content-summary">
+                    My academic interests center on bridging theoretical guarantees in control systems
+                    with experimentally validated robotic platforms. I am particularly interested in
+                    resilient multi-agent coordination, human-in-the-loop autonomy, and the practical
+                    constraints of deploying robotics systems in real-world environments.
+                    </p>
             </section>
         </section>
 </main>
+
+<p class="related">
+My research activities are detailed further on the
+<a href="./research.html">robotics research page</a>.
+</p>
+
 
 <div id="site-footer"></div>
 
