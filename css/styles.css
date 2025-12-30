@@ -1433,17 +1433,17 @@ html[data-theme="dark"] .video iframe {
 
 
 
-body.dark .favorite-card {
+html[data-theme="dark"] .favorite-card { 
   background: #121212;
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-body.dark .favorite-text p,
-body.dark .favorite-text small {
+html[data-theme="dark"] .favorite-text p,
+html[data-theme="dark"] .favorite-text small {
   color: #bbb;
 }
 
-body.dark .favorite-source {
+html[data-theme="dark"] .favorite-source {
   background: #1e293b;
   color: #cbd5f5;
 }

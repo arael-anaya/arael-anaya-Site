@@ -64,13 +64,13 @@ function initFooter() {
     if (!toggle) return;
 
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    if (savedTheme) {
-        root.setAttribute("data-theme", savedTheme);
-    } else if (prefersDark) {
+    if (savedTheme === "dark") {
         root.setAttribute("data-theme", "dark");
+    } else {
+        root.removeAttribute("data-theme");
     }
+
 
     toggle.addEventListener("click", () => {
         const isDark = root.getAttribute("data-theme") === "dark";
