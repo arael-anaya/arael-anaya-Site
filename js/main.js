@@ -180,7 +180,8 @@ const KONAMI = [
 document.addEventListener("DOMContentLoaded", () => {
     if (document.body.dataset.requiresAuth === "favorites") {
         if (!sessionStorage.getItem("favoritesUnlocked")) {
-        window.location.replace("./index.html");
+        window.location.replace(`${BASE}/index.html`);
+
         }
     }
 });
