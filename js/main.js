@@ -11,6 +11,7 @@ const HEADER_HTML = `
         <nav class="nav" aria-label="Primary navigation">
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <a href="${BASE}/index.html">Main</a>
         <a href="${BASE}/pages/projects.html">Projects</a>
         <a href="${BASE}/pages/research.html">Research</a>
@@ -19,12 +20,17 @@ const HEADER_HTML = `
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         <a href="./index.html">Main</a>
         <a href="./pages/projects.html">Projects</a>
         <a href="./pages/research.html">Research</a>
         <a href="./pages/about.html">About</a>
         <a href="./pages/contact.html">Contact</a>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -34,12 +40,15 @@ const HEADER_HTML = `
     <nav class="mobile-nav" aria-label="Mobile navigation">
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <a href="${BASE}/index.html">Main</a>
         <a href="${BASE}/pages/projects.html">Projects</a>
         <a href="${BASE}/pages/research.html">Research</a>
         <a href="${BASE}/pages/about.html">About</a>
         <a href="${BASE}/pages/contact.html">Contact</a>
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         <a href="./index.html">Main</a>
