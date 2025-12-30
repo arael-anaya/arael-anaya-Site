@@ -52,10 +52,13 @@ function initHeader() {
 
 const FOOTER_HTML = `
     <div class="container footer-content">
-        <button class="theme-toggle">Theme</button>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <span class="theme-label"></span>
+        </button>
         <small>© <span id="year"></span> Arael Anaya</small>
     </div>
 `;
+
 
 function initFooter() {
     const toggle = document.querySelector(".theme-toggle");
@@ -67,16 +70,20 @@ function initFooter() {
 
     if (savedTheme === "dark") {
         root.setAttribute("data-theme", "dark");
+        toggle.textContent = "Light Mode";
     } else {
         root.removeAttribute("data-theme");
+        toggle.textContent = "Dark Mode";
     }
-
 
     toggle.addEventListener("click", () => {
         const isDark = root.getAttribute("data-theme") === "dark";
         const newTheme = isDark ? "light" : "dark";
+
         root.setAttribute("data-theme", newTheme);
         localStorage.setItem("theme", newTheme);
+
+        toggle.textContent = isDark ? "Dark Mode" : "Light Mode";
     });
 
     const year = document.getElementById("year");
