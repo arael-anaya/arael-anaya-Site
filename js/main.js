@@ -48,9 +48,14 @@ function initHeader() {
         setTimeout(() => (clicks = 0), 2000);
         });
     }
-
-    
 }
+
+const FOOTER_HTML = `
+    <div class="container footer-content">
+        <button class="theme-toggle">Theme</button>
+        <small>© <span id="year"></span> Arael Anaya</small>
+    </div>
+`;
 
 function initFooter() {
     const toggle = document.querySelector(".theme-toggle");
