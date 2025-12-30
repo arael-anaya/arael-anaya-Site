@@ -1,86 +1,29 @@
+const BASE = window.location.hostname.includes("github.io")
+    ? `/${window.location.pathname.split("/")[1]}`
+    : "";
+window.__BASE__ = BASE;
 
 
 const HEADER_HTML = `
     <div class="container header-row">
-        <a class="brand" href="./index.html">Arael A. Anaya</a>
+        <a class="brand" href="${BASE}/index.html">Arael A. Anaya</a>
         <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
         <nav class="nav" aria-label="Primary navigation">
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
         <a href="${BASE}/index.html">Main</a>
         <a href="${BASE}/pages/projects.html">Projects</a>
         <a href="${BASE}/pages/research.html">Research</a>
         <a href="${BASE}/pages/about.html">About</a>
         <a href="${BASE}/pages/contact.html">Contact</a>
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-        <a href="./index.html">Main</a>
-        <a href="./pages/projects.html">Projects</a>
-        <a href="./pages/research.html">Research</a>
-        <a href="./pages/about.html">About</a>
-        <a href="./pages/contact.html">Contact</a>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
-        <a href="/index.html">Main</a>
-        <a href="/pages/projects.html">Projects</a>
-        <a href="/pages/research.html">Research</a>
-        <a href="/pages/about.html">About</a>
-        <a href="/pages/contact.html">Contact</a>
->>>>>>> e4c9bbbcde6dc2d4077fd15dcc2002a76a476a05
         </nav>
     </div>
 
     <nav class="mobile-nav" aria-label="Mobile navigation">
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
         <a href="${BASE}/index.html">Main</a>
         <a href="${BASE}/pages/projects.html">Projects</a>
         <a href="${BASE}/pages/research.html">Research</a>
         <a href="${BASE}/pages/about.html">About</a>
         <a href="${BASE}/pages/contact.html">Contact</a>
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-        <a href="./index.html">Main</a>
-        <a href="./pages/projects.html">Projects</a>
-        <a href="./pages/research.html">Research</a>
-        <a href="./pages/about.html">About</a>
-        <a href="./pages/contact.html">Contact</a>
-
->>>>>>> Stashed changes
     </nav>
-`;
-=======
-        <a href="/index.html">Main</a>
-        <a href="/pages/projects.html">Projects</a>
-        <a href="/pages/research.html">Research</a>
-        <a href="/pages/about.html">About</a>
-        <a href="/pages/contact.html">Contact</a>
->>>>>>> e4c9bbbcde6dc2d4077fd15dcc2002a76a476a05
-
-    </nav>
-    `;
-
-    const FOOTER_HTML = `
-    <div class="container footer-content">
-        <button class="theme-toggle">Theme</button>
-        <small>© <span id="year"></span> Arael Anaya</small>
-    </div>
 `;
 
 
@@ -224,7 +167,7 @@ const KONAMI = [
 
     function unlockFavorites() {
     sessionStorage.setItem("favoritesUnlocked", "true");
-    window.location.href = "../pages/favorites.html";
+    window.location.href = `${BASE}/pages/favorites.html`;
 }
 
 
@@ -268,7 +211,7 @@ switch (page) {
         case "favorites":
     
         if (!sessionStorage.getItem("favoritesUnlocked")) {
-            window.location.replace("/index.html");
+            window.location.replace("${BASE}/index.html");
         }
     break;
 }
@@ -281,3 +224,5 @@ if (window.location.hash) {
     });
 }
 
+import { applySEO } from "./seo.js";
+applySEO(page);
