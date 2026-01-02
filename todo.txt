@@ -1,5 +1,14 @@
 REMAINING WORK CHECKLIST
 
+Ideas:
+    -Feed of Git Commits
+    - Chatbot fwature that uses LLM API to essentially act just like me
+    - Add a Portfolio Page 
+    - Add that drawing thing where anyone can draw a photo on the site to show they were there
+    -Add a relevant papers to research
+    -Add a section for papers im an author / co-author on
+
+
 1. CORE TECHNICAL STRUCTURE
 - Favorites page that uses API calls to highlight favorites:
     - Songs
@@ -9,19 +18,19 @@ REMAINING WORK CHECKLIST
 
     🎨 Add subtle category-specific styling (badges, icons)
 
-⚡ Add caching + TTL (performance + reliability)
+    ⚡ Add caching + TTL (performance + reliability)
 
-🧭 Add sorting/grouping (design polish)
+    🧭 Add sorting/grouping (design polish)
 
-🧠 Add a short write-up explaining this system (admissions gold)
+    🧠 Add a short write-up explaining this system (admissions gold)
 
-Add featured badges visually
+    Add featured badges visually
 
-🔎 Add filtering by category
+    🔎 Add filtering by category
 
-📱 Tighten mobile spacing
+    📱 Tighten mobile spacing
 
-🧠 Write a short technical note explaining this system (huge admissions value)
+    🧠 Write a short technical note explaining this system (huge admissions value)
 
 2. PROJECT SYSTEM (Core value of the site)
 

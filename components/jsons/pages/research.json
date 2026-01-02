@@ -4,8 +4,8 @@
     "type": "research",
     "title": "MPALA Lab",
     "meta": "Motion Planning, Active Learning, and Autonomy Lab · Spring 2025 - Present",
-    "lead": "Focused on resilient multi-agent consensus and autonomous aerial systems, translating theoretical coordination models into real-world swarm flight experiments using Crazyflie drones.",
-    "summary": "My research has spanned designing and simulating resilient consensus protocols (such as W-MSR), tuning Kalman filters for localization accuracy, and translating theoretical models of multi-agent coordination into experimental demonstrations. I enjoy the challenge of bridging rigorous mathematical analysis with hands-on implementation, refining flight dynamics, and debugging distributed systems to make autonomous swarms robust against uncertainty and adversarial interference.",
+    "lead": "Focused on resilient multi-agent consensus and autonomous aerial systems, translating theoretical  models into real-world swarm flight experiments using Crazyflie drones.",
+    "summary": "At the Mpala Lab, I’ve been working on a multi-agent rendezvous project focused on getting groups of drones to coordinate using decentralized consensus algorithms like W-MSR. I adapted the Crazyflie platform to run these algorithms in real time, allowing each drone to compute its own motion and converge toward a shared meeting point. Along the way, I ran into scaling limits in the existing ROS 2 Crazyflie stack, which led me to start rebuilding the pipeline from the ground up. My current work focuses on redesigning this system and implementing an SO(3)-based model controller to support more robust, scalable multi-agent experiments.",
     "tags": ["research", "lab"],
     "logo": "/assets/images/logos/mpalaLogo.png",
     "videos": [

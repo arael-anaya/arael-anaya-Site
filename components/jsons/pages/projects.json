@@ -1,5 +1,43 @@
 [
     {
+    "id": "remclock",
+    "type": "project",
+    "title": "RemClock",
+    "meta": "Ongoing · App Design and Development",
+    "lead": "A small, intentional app built to help with focus, routines, and time awareness.",
+    "logo": "/assets/images/logos/projectLogo.png",
+    "summary": "RemClock started as a personal tool to make routines feel more intentional and less overwhelming. I’ve been designing and refining it around simplicity, gentle reminders, and features that actually help me stay present instead of distracted.",
+    "bullets": [
+        "Designed around simple time blocks and reminders",
+        "Focus on clarity and minimal friction rather than feature overload",
+        "Iterative development driven by personal use and reflection",
+        "Built to support routines, not control them"
+    ]
+    },
+
+    {
+    "id": "personal-website",
+    "type": "project",
+    "title": "Personal Website",
+    "meta": "Ongoing · Design, Development, and Iteration",
+    "lead": "A personal space to document my projects, research interests, and ongoing work. Actually I think you might be on it.",
+    "logo": "/assets/images/logos/projectLogo.png",
+    "summary": "Designed and built a modular personal website to showcase projects and research while prioritizing clarity, maintainability and my own learning",
+    "bullets": [
+        "Custom JSON-driven content system for projects, research, and media",
+        "Modular JavaScript rendering reused across the site",
+        "Designed to scale as projects and research grow (and as I inevitably change things)",
+        "Focused on clarity, accessibility, and not overengineering a personal site"
+    ],
+    "links": [
+        {
+            "title": "Visit Website",
+            "url": "https://araelanaya.com/"
+        }
+    ]
+    },
+
+    {
         "id": "megn-301",
         "type" : "project",
         "title": "Portable Pedal-Powered Generator",
