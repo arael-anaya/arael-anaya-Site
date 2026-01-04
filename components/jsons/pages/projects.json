@@ -68,6 +68,50 @@
     },
 
     {
+        "id": "megn-324-fea",
+        "type": "project",
+        "title": "Rear Suspension FEA & Design Optimization",
+        "meta": "MEGN 324 · Finite Element Analysis · Fall 2025",
+        "lead": "A comprehensive analytical and finite element study of a double wishbone rear suspension system under static loading.",
+        "logo": "/assets/images/logos/projectLogo.png",
+        "summary": "Performed a full mechanics-of-materials and finite element analysis of a rear suspension assembly to evaluate load paths, deformation behavior, and stress concentrations. Validated analytical statics against SolidWorks Simulation results, compared fixed and spring-supported shock configurations, and developed a simplified lower control arm model for efficient mesh convergence and design optimization studies.",
+        "bullets": [
+            "Derived internal reaction forces using full statics and mechanics of materials",
+            "Multi-body FEA of complete suspension assembly in SolidWorks Simulation",
+            "Comparison of fixed vs spring-supported shock behavior and system deformation",
+            "Mesh convergence study validating stress accuracy in critical fillet regions",
+            "Simplified lower control arm model reproducing full-assembly stress within 0.1%",
+            "Design optimization achieving ~14% volume reduction while maintaining FOS > 3.5"
+        ],
+        "report": {
+            "title": "Rear Suspension FEA & Optimization – Final Report",
+            "pdf": "/assets/Reports/Final Report FEA.pdf"
+        }
+    },
+    {
+        "id": "eeng-307-controls",
+        "type": "project",
+        "title": "Quadcopter Altitude Feedback Control System",
+        "meta": "EENG 307 · Feedback Control Systems · Fall 2025",
+        "lead": "A PID-controlled quadcopter altitude model designed to achieve stable, accurate height regulation under disturbances.",
+        "logo": "/assets/images/logos/projectLogo.png",
+        "summary": "Modeled and controlled the vertical motion of a quadcopter using classical feedback control techniques. Derived the plant dynamics from Newton’s laws, analyzed open-loop stability, and designed a PID controller to achieve zero steady-state error, minimal overshoot, and stable transient response. Controller performance was validated through MATLAB and Simulink simulations, including disturbance rejection and reference tracking.",
+        "bullets": [
+            "Derived UAV altitude plant model as a mass–damper system with gravity and drag",
+            "Open-loop stability analysis revealing type-1 system behavior",
+            "PID controller design using root locus and Control System Designer",
+            "Simulink validation with step and sinusoidal reference tracking",
+            "Disturbance rejection analysis under gravity input",
+            "Achieved stable closed-loop response with zero steady-state error"
+        ],
+        "report": {
+            "title": "Quadcopter Altitude Control – Final Report",
+            "pdf": "/assets/Reports/Final Report 307.pdf"
+        }
+    },
+
+
+    {
         "id": "megn-381",
         "type" : "project",
         "title": "Accessible Cup Holder Bracket",
