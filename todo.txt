@@ -123,3 +123,6 @@ Admissions-Focused Copy
 - All links valid
 - Metadata (title, description) added
 - Site feels cohesive and intentional
+
+
+<a href="https://www.flaticon.com/free-icons/robot-arm" title="robot arm icons">Robot arm icons created by Design Circle - Flaticon</a>
