@@ -2,7 +2,7 @@ REMAINING WORK CHECKLIST
 
 Ideas:
     -Feed of Git Commits
-    - Chatbot fwature that uses LLM API to essentially act just like me
+    - Chatbot feature that uses LLM API to essentially act just like me
     - Add a Portfolio Page 
     - Add that drawing thing where anyone can draw a photo on the site to show they were there
     -Add a relevant papers to research
@@ -123,3 +123,6 @@ Admissions-Focused Copy
 - All links valid
 - Metadata (title, description) added
 - Site feels cohesive and intentional
+
+
+<a href="https://www.flaticon.com/free-icons/robot-arm" title="robot arm icons">Robot arm icons created by Design Circle - Flaticon</a>
