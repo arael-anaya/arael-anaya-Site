@@ -95,25 +95,26 @@ export function renderEntries(entries, container) {
                     ` : ""}
                 </header>
 
-                ${e.summary ? `
-                    <div class="content-body">
+                ${(e.summary || e.bullets) ? `
+                    <div class="content-body ${needsToggle ? "" : "expanded"}">
                         ${needsToggle ? `
                             <button class="content-toggle" aria-expanded="false">
                                 Show more ↓
                             </button>
                         ` : ""}
 
-                        <div class="content-summary-wrapper ${needsToggle ? "" : "expanded"}">
-                            <p class="content-summary">${e.summary}</p>
+                        <div class="content-summary-wrapper">
+                            ${e.summary ? `<p class="content-summary">${e.summary}</p>` : ""}
+
+                            ${e.bullets ? `
+                                <ul class="content-bullets">
+                                    ${e.bullets.map(b => `<li>${b}</li>`).join("")}
+                                </ul>
+                            ` : ""}
                         </div>
                     </div>
                 ` : ""}
 
-                ${e.bullets ? `
-                    <ul class="content-bullets">
-                        ${e.bullets.map(b => `<li>${b}</li>`).join("")}
-                    </ul>
-                ` : ""}
 
                 ${hasMedia ? `
                     <div class="content-divider"></div>
