@@ -3,8 +3,8 @@
     "title": "Robotics, Control, and Multi-Agent Systems",
     "lead": "Designing and experimentally validating resilient multi-agent robotic systems, bridging theory with real-world autonomy.",
     "actions": [
-      { "label": "Projects", "href": "projects.html" },
-      { "label": "Research", "href": "research.html" }
+      { "label": "Projects", "href": "/pages/projects/" },
+      { "label": "Research", "href": "/pages/research/" }
     ]
   },
 
@@ -13,7 +13,7 @@
     "lead": "Background, research interests, and experience.",
     "actions": [
       { "label": "Resume", "href": "#resume" },
-      { "label": "Contact", "href": "contact.html" }
+      { "label": "Contact", "href": "/pages/contact/" }
     ]
   },
 
@@ -21,8 +21,8 @@
     "title": "Projects",
     "lead": "Engineering and robotics projects spanning control systems, autonomous platforms, and experimental validation.",
     "actions": [
-      { "label": "Research", "href": "research.html" },
-      { "label": "About", "href": "about.html" }
+      { "label": "Research", "href": "/pages/research/" },
+      { "label": "About", "href": "/pages/about/" }
     ]
   },
 
@@ -31,7 +31,7 @@
     "lead": "Experimental and theoretical work in resilient control, aerial swarms, and multi-agent systems.",
     "actions": [
       { "label": "Publications", "href": "https://scholar.google.com/" },
-      { "label": "About", "href": "about.html" }
+      { "label": "About", "href": "/pages/about/" }
     ]
   },
 
